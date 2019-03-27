@@ -35,7 +35,19 @@ Note: when building for the first time, you may need to press 'Build' twice: fir
 
 - Open in Android Studio: **example1/ui/android**
 
-Note: requires CMake 3.12+, add to **example1/ui/android/local.properties**: Mac: cmake.dir=/usr/local, Windows: cmake.dir=c\:\\Program Files\\CMake
+Requires CMake 3.12+, add to **example1/ui/android/local.properties**:
+
+Mac:
+
+```text
+cmake.dir=/usr/local
+```
+
+Windows:
+
+```text
+cmake.dir=c\:\\Program Files\\CMake
+```
 
 #### Python (Mac)
 
