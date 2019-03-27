@@ -19,6 +19,8 @@ $ git clone https://github.com/scapix-com/scapix
 - Run one of the scripts in **project** folder to create library project (chatlib).
 - Open corresponding platform specific application project in **ui** folder (chat).
 
+Note: when building for the first time, you may need to press 'Build' twice: first time to generate bridge code, second time to build target.
+
 #### iOS
 
 - Run: **example1/project/xcode_ios_objc.sh**
@@ -33,9 +35,7 @@ $ git clone https://github.com/scapix-com/scapix
 
 - Open in Android Studio: **example1/ui/android**
 
-{{% notice note %}}
-Requires CMake 3.12+, add to **example1/ui/android/local.properties**: Mac: cmake.dir=/usr/local, Windows: cmake.dir=c\:\\Program Files\\CMake
-{{% /notice %}}
+Note: requires CMake 3.12+, add to **example1/ui/android/local.properties**: Mac: cmake.dir=/usr/local, Windows: cmake.dir=c\:\\Program Files\\CMake
 
 #### Python (Mac)
 
