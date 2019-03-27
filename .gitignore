@@ -1,0 +1,8 @@
+# scapix
+/generated/
+
+# macos
+.DS_Store
+
+# xcode
+xcuserdata/
