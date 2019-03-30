@@ -52,6 +52,10 @@ set_target_properties(chatlib PROPERTIES
     CXX_EXTENSIONS ON # not required, but speeds up compilation of SCAPIX_META_STRING with clang and gcc
 )
 
+if(${scapix_bridge} STREQUAL objc)
+    target_compile_options(chatlib PUBLIC "-fobjc-arc")
+endif()
+
 target_include_directories(chatlib PRIVATE ${PROJECT_ROOT}/source)
 target_compile_definitions(chatlib PUBLIC SCAPIX_BRIDGE=${scapix_bridge} SCAPIX_PLATFORM=${scapix_platform})
 
