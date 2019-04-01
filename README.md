@@ -49,6 +49,8 @@ Windows:
 cmake.dir=c\:\\Program Files\\CMake
 ```
 
+On Windows [ninja.exe](https://github.com/ninja-build/ninja/releases) needs to be in PATH.
+
 #### Python (Mac)
 
 - Run: **example1/project/xcode_mac_python.sh**
