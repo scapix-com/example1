@@ -52,15 +52,7 @@ set_target_properties(chatlib PROPERTIES
     CXX_EXTENSIONS ON # not required, but speeds up compilation of SCAPIX_META_STRING with clang and gcc
 )
 
-if(${scapix_bridge} STREQUAL objc)
-    target_compile_options(chatlib PUBLIC "-fobjc-arc")
-endif()
-
 target_include_directories(chatlib PRIVATE ${PROJECT_ROOT}/source)
-target_compile_definitions(chatlib PUBLIC SCAPIX_BRIDGE=${scapix_bridge} SCAPIX_PLATFORM=${scapix_platform})
-
-add_subdirectory(${SCAPIX_ROOT}/project/cmake ${PROJECT_BINARY_DIR}/scapix)
-target_link_libraries(chatlib PUBLIC scapix)
 
 # allows to use host boost headers for android
 set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE BOTH)
@@ -69,7 +61,8 @@ set(Boost_USE_STATIC_LIBS ON)
 find_package(Boost 1.67 REQUIRED)
 target_include_directories(chatlib PUBLIC ${Boost_INCLUDE_DIRS})
 
-# call after target_include_directories and target_link_libraries
+# call scapix_bridge_headers() after all target_include_directories and target_link_libraries
+add_subdirectory(${SCAPIX_ROOT}/project/cmake ${PROJECT_BINARY_DIR}/scapix)
 
 scapix_bridge_headers(
     chatlib
