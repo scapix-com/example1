@@ -6,6 +6,18 @@ package com.scapix.chat;
 public final class Session extends com.scapix.Bridge
 {
 	@FunctionalInterface
+	public static interface Function0
+	{
+		void call();
+	}
+
+	@FunctionalInterface
+	public static interface Function1
+	{
+		void call(java.lang.String p1);
+	}
+
+	@FunctionalInterface
 	public static interface Function2
 	{
 		int call(java.lang.String p1, Contact[] p2);
@@ -21,18 +33,6 @@ public final class Session extends com.scapix.Bridge
 	public static interface Function4
 	{
 		java.lang.String call(int p1, Contact[] p2);
-	}
-
-	@FunctionalInterface
-	public static interface Function0
-	{
-		void call();
-	}
-
-	@FunctionalInterface
-	public static interface Function1
-	{
-		void call(java.lang.String p1);
 	}
 
 	public Session() { _init(); }
@@ -120,7 +120,9 @@ final class Session2 extends com.scapix.Bridge
 	public native void addContact(Contact contact);
 	public native void addSession(Session session);
 	public native void addSession2(Session2 session);
+	public Session2() { _init(); }
 
+	private native void _init();
 	private Session2(Tag tag) {}
 	static { System.loadLibrary("chatlib"); }
 }

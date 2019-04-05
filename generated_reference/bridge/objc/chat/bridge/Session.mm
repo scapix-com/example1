@@ -286,4 +286,9 @@
 	return scapix::bridge::objc::call<void(chat::session2::*)(std::shared_ptr<chat::session2>), &chat::session2::add_session2, void>(self, session);
 }
 
+-(instancetype)init
+{
+	return scapix::bridge::objc::init<chat::session2, void()>(self);
+}
+
 @end

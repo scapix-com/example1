@@ -65,5 +65,6 @@ void scapix_python_export_session(pybind11::module& m)
 		.def<void(chat::session2::*)(std::shared_ptr<chat::contact>)>("add_contact", &chat::session2::add_contact)
 		.def<void(chat::session2::*)(std::shared_ptr<chat::session>)>("add_session", &chat::session2::add_session)
 		.def<void(chat::session2::*)(std::shared_ptr<chat::session2>)>("add_session2", &chat::session2::add_session2)
+		.def(pybind11::init<>())
 	;
 }

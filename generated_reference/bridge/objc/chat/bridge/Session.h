@@ -3,10 +3,10 @@
 
 #import <scapix/bridge/objc/BridgeObject.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @class Contact;
 @class Session2;
-
-NS_ASSUME_NONNULL_BEGIN
 
 @interface Session : BridgeObject
 
@@ -87,6 +87,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)addContact:(Contact*)contact;
 -(void)addSession:(Session*)session;
 -(void)addSession2:(Session2*)session;
+-(instancetype)init;
 
 @end
 

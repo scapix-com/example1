@@ -3,11 +3,11 @@
 
 #import <scapix/bridge/objc/BridgeObject.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @class Contact;
 @class Session;
 @class Session2;
-
-NS_ASSUME_NONNULL_BEGIN
 
 @interface Model : BridgeObject
 
