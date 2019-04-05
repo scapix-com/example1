@@ -57,7 +57,6 @@ target_include_directories(chatlib PRIVATE ${PROJECT_ROOT}/source)
 # allows to use host boost headers for android
 set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE BOTH)
 
-set(BOOST_ROOT c:/library/dev/boost_1_67_0)
 set(Boost_USE_STATIC_LIBS ON)
 find_package(Boost 1.67 REQUIRED)
 target_include_directories(chatlib PUBLIC ${Boost_INCLUDE_DIRS})
