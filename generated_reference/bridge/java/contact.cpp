@@ -2,7 +2,21 @@
 // https://www.scapix.com
 
 #include <scapix/bridge/java/init.h>
-#include "contact.h"
+#include <chat/contact.h>
+
+namespace scapix {
+namespace link {
+namespace java {
+
+template <>
+struct class_name<chat::contact>
+{
+	using type = SCAPIX_META_STRING("com/scapix/chat/Contact");
+};
+
+} // namespace java
+} // namespace link
+} // namespace scapix
 
 void scapix_java_export_contact()
 {

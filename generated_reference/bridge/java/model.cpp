@@ -2,9 +2,39 @@
 // https://www.scapix.com
 
 #include <scapix/bridge/java/init.h>
-#include "model.h"
-#include "contact.h"
-#include "session.h"
+#include <chat/model.h>
+
+namespace scapix {
+namespace link {
+namespace java {
+
+template <>
+struct class_name<chat::model>
+{
+	using type = SCAPIX_META_STRING("com/scapix/chat/Model");
+};
+
+template <>
+struct class_name<chat::contact>
+{
+	using type = SCAPIX_META_STRING("com/scapix/chat/Contact");
+};
+
+template <>
+struct class_name<chat::session>
+{
+	using type = SCAPIX_META_STRING("com/scapix/chat/Session");
+};
+
+template <>
+struct class_name<chat::session2>
+{
+	using type = SCAPIX_META_STRING("com/scapix/chat/Session2");
+};
+
+} // namespace java
+} // namespace link
+} // namespace scapix
 
 void scapix_java_export_model()
 {
