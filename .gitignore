@@ -6,3 +6,6 @@
 
 # xcode
 xcuserdata/
+
+# vs
+.vs/
