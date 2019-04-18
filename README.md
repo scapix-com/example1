@@ -37,19 +37,11 @@ Note: when building for the first time, you may need to press 'Build' twice: fir
 
 Requires CMake 3.12+, add to **example1/ui/android/local.properties**:
 
-Mac:
-
-```text
-cmake.dir=/usr/local
-```
-
-Windows:
-
-```text
-cmake.dir=c\:\\Program Files\\CMake
-```
+Mac: `cmake.dir=/usr/local`
+Windows: `cmake.dir=c\:\\Program Files\\CMake`
 
 On Windows [ninja.exe](https://github.com/ninja-build/ninja/releases) needs to be in PATH.
+On Mac if `/usr/include` folder is missing, run `xcode-select --install` (Mojave: install package `/Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg`)
 
 #### Python (Mac)
 
