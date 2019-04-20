@@ -45,6 +45,7 @@ On Mac if `/usr/include` folder is missing, run `xcode-select --install` (Mojave
 
 #### Python (Mac)
 
+- brew install pybind11
 - Run: **example1/project/xcode_mac_python.sh**
 - Open and build in Xcode: **example1/project/build/xcode_mac_python/chatlib.xcodeproj**
 
@@ -59,6 +60,8 @@ c.name()
 
 #### Python (Windows)
 
+- vcpkg install pybind11
+- update vcpkg path in **example1\project\vs_python.cmd**
 - Run: **example1\project\vs_python.cmd**
 - Open and build in Visual Studio: **example1\project\build\vs_python\chatlib.sln**
 
