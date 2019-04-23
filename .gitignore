@@ -9,3 +9,9 @@ xcuserdata/
 
 # vs
 .vs/
+
+# vs cs
+bin/Debug/
+bin/Release/
+obj/Debug/
+obj/Release/
