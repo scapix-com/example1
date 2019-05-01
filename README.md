@@ -35,7 +35,7 @@ Note: when building for the first time, you may need to press 'Build' twice: fir
 
 - Open in Android Studio: **example1/ui/android**
 
-Requires CMake 3.12+, add to **example1/ui/android/local.properties**:
+Requires CMake 3.14+, add to **example1/ui/android/local.properties**:
 
 Mac: `cmake.dir=/usr/local`\
 Windows: `cmake.dir=c\:\\Program Files\\CMake`
@@ -45,9 +45,10 @@ On Mac if `/usr/include` folder is missing, run `xcode-select --install` (Mojave
 
 #### Python (Mac)
 
-- brew install pybind11
+- brew install python3
 - Run: **example1/project/xcode_mac_python.sh**
 - Open and build in Xcode: **example1/project/build/xcode_mac_python/chatlib.xcodeproj**
+- Test by running **example1/ui/python/run.py**
 
 ```bash
 cd example1/project/build/xcode_mac_python/Debug
@@ -60,10 +61,10 @@ c.name()
 
 #### Python (Windows)
 
-- vcpkg install pybind11
-- update vcpkg path in **example1\project\vs_python.cmd**
+- Install [python3](https://www.python.org/downloads/windows/)
 - Run: **example1\project\vs_python.cmd**
 - Open and build in Visual Studio: **example1\project\build\vs_python\chatlib.sln**
+- Test by running **example1\ui\python\run.py**
 
 ```bash
 cd example1\project\build\vs_python\Debug
