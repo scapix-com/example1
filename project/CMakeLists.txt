@@ -1,4 +1,15 @@
-cmake_minimum_required(VERSION 3.12)
+cmake_minimum_required(VERSION 3.14)
+
+if("$ENV{HUNTER_ROOT}" STREQUAL "")
+    set(HUNTER_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/build/.hunter")
+endif()
+
+include("../../scapix/project/cmake/modules/HunterGate.cmake")
+
+HunterGate(
+    URL "https://github.com/ruslo/hunter/archive/v0.23.165.tar.gz"
+    SHA1 "5a73f91df5f6109c0bb1104d0c0ee423f7bece79"
+)
 
 project(chatlib)
 
@@ -54,11 +65,9 @@ set_target_properties(chatlib PROPERTIES
 
 target_include_directories(chatlib PRIVATE ${PROJECT_ROOT}/source)
 
-# allows to use host boost headers for android
-set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE BOTH)
-
 set(Boost_USE_STATIC_LIBS ON)
-find_package(Boost 1.67 REQUIRED)
+hunter_add_package(Boost)
+find_package(Boost REQUIRED)
 target_include_directories(chatlib PUBLIC ${Boost_INCLUDE_DIRS})
 
 # call scapix_bridge_headers() after all target_include_directories and target_link_libraries

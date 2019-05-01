@@ -1,1 +1,1 @@
-@cmd /c "mkdir build\vs_python & cd build\vs_python & cmake -Dscapix_bridge=python -Dscapix_platform=windows -G "Visual Studio 15 2017" -T host=x64 -A x64 -DVCPKG_TARGET_TRIPLET=x64-windows-static -DCMAKE_TOOLCHAIN_FILE=e:/library/build/vcpkg/scripts/buildsystems/vcpkg.cmake ../.."
+@cmd /c "mkdir build\vs_python & cd build\vs_python & cmake -Dscapix_bridge=python -Dscapix_platform=windows -G "Visual Studio 16 2019" -T host=x64 -A x64 ../.."
