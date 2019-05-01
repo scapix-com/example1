@@ -1,7 +1,11 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+
+import os, sys
+sys.path.append(os.path.join(os.path.dirname(__file__), '../../project/build/vs_python/Release'))
+sys.path.append(os.path.join(os.path.dirname(__file__), '../../project/build/xcode_mac_python/Debug'))
 
 import chatlib
 
-c = chat.Contact()
+c = chatlib.Contact()
 c.name("hello world!")
-print (c.name2())
+print (c.name())
