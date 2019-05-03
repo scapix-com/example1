@@ -55,6 +55,11 @@ endif()
 
 add_library(chatlib ${LIBRARY_TYPE} ${chat_sources} ${platforms_sources} ${platform_sources})
 
+# JVM on MacOS looks for native libs with .dylib extension
+if(APPLE AND ${scapix_bridge} STREQUAL java)
+    set_target_properties(chatlib PROPERTIES SUFFIX ".dylib")
+endif()
+
 source_group(TREE ${PROJECT_ROOT}/source/chat PREFIX "source" FILES ${chat_sources} ${platforms_sources} ${platform_sources})
 
 set_target_properties(chatlib PROPERTIES
