@@ -1,27 +1,27 @@
 cmake_minimum_required(VERSION 3.14)
 
+set(PROJECT_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/..)
+get_filename_component(PROJECT_ROOT ${PROJECT_ROOT} ABSOLUTE)
+
+set(SCAPIX_ROOT ${PROJECT_ROOT}/../scapix CACHE STRING "scapix lib path")
+get_filename_component(SCAPIX_ROOT ${SCAPIX_ROOT} ABSOLUTE)
+
 if("$ENV{HUNTER_ROOT}" STREQUAL "")
     set(HUNTER_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/build/.hunter")
 endif()
 
-include("../../scapix/project/cmake/modules/HunterGate.cmake")
+include("${SCAPIX_ROOT}/project/cmake/modules/HunterGate.cmake")
 
 HunterGate(
     URL "https://github.com/ruslo/hunter/archive/v0.23.165.tar.gz"
     SHA1 "5a73f91df5f6109c0bb1104d0c0ee423f7bece79"
 )
 
-project(chatlib)
+project(chatlib CXX)
 
 set(scapix_bridge "java" CACHE STRING "cpp, java, objc, python")
 set(scapix_platform "windows" CACHE STRING "one of the folders inside 'source/chat/platform': ios, android, macos, windows, linux, etc.")
 set(scapix_java_api "android-28" CACHE STRING "one of the folders inside 'scapix/java_api': jdk-11.0.2, android-28, etc.")
-
-set(PROJECT_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/..)
-get_filename_component(PROJECT_ROOT ${PROJECT_ROOT} ABSOLUTE)
-
-set(SCAPIX_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/../../scapix)
-get_filename_component(SCAPIX_ROOT ${SCAPIX_ROOT} ABSOLUTE)
 
 include(${SCAPIX_ROOT}/project/cmake/modules/scapix.cmake)
 
