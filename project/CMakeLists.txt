@@ -19,9 +19,9 @@ HunterGate(
 
 project(chatlib CXX)
 
-set(scapix_bridge "java" CACHE STRING "cpp, java, objc, python")
-set(scapix_platform "windows" CACHE STRING "one of the folders inside 'source/chat/platform': ios, android, macos, windows, linux, etc.")
-set(scapix_java_api "android-28" CACHE STRING "one of the folders inside 'scapix/java_api': jdk-11.0.2, android-28, etc.")
+set(SCAPIX_BRIDGE "java" CACHE STRING "cpp, java, objc, python")
+set(SCAPIX_PLATFORM "windows" CACHE STRING "one of the folders inside 'source/chat/platform': ios, android, macos, windows, linux, etc.")
+set(SCAPIX_JAVA_API "android-28" CACHE STRING "one of the folders inside 'scapix/java_api': jdk-11.0.2, android-28, etc.")
 
 include(${SCAPIX_ROOT}/project/cmake/modules/scapix.cmake)
 
@@ -39,24 +39,24 @@ file(GLOB_RECURSE platforms_sources CONFIGURE_DEPENDS
 	${PROJECT_ROOT}/source/chat/platform/*.*
 )
 
-list(FILTER platforms_sources EXCLUDE REGEX "${PROJECT_ROOT}/source/chat/platform/${scapix_platform}/*")
+list(FILTER platforms_sources EXCLUDE REGEX "${PROJECT_ROOT}/source/chat/platform/${SCAPIX_PLATFORM}/*")
 
 set_source_files_properties(${platforms_sources} PROPERTIES HEADER_FILE_ONLY TRUE)
 
 # platform_sources
 
 file(GLOB_RECURSE platform_sources CONFIGURE_DEPENDS
-	${PROJECT_ROOT}/source/chat/platform/${scapix_platform}/*.*
+	${PROJECT_ROOT}/source/chat/platform/${SCAPIX_PLATFORM}/*.*
 )
 
-if(${scapix_bridge} STREQUAL java OR ${scapix_bridge} STREQUAL python)
+if(${SCAPIX_BRIDGE} STREQUAL java OR ${SCAPIX_BRIDGE} STREQUAL python)
    set(LIBRARY_TYPE MODULE)
 endif()
 
 add_library(chatlib ${LIBRARY_TYPE} ${chat_sources} ${platforms_sources} ${platform_sources})
 
 # JVM on MacOS looks for native libs with .dylib extension
-if(APPLE AND ${scapix_bridge} STREQUAL java)
+if(APPLE AND ${SCAPIX_BRIDGE} STREQUAL java)
     set_target_properties(chatlib PROPERTIES SUFFIX ".dylib")
 endif()
 
