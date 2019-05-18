@@ -13,8 +13,8 @@ endif()
 include("${SCAPIX_ROOT}/project/cmake/modules/HunterGate.cmake")
 
 HunterGate(
-    URL "https://github.com/ruslo/hunter/archive/v0.23.165.tar.gz"
-    SHA1 "5a73f91df5f6109c0bb1104d0c0ee423f7bece79"
+    URL "https://github.com/ruslo/hunter/archive/v0.23.171.tar.gz"
+    SHA1 "5d68bcca78eee347239ca5f4d34f4b6c12683154"
 )
 
 project(chatlib CXX)
@@ -70,10 +70,12 @@ set_target_properties(chatlib PROPERTIES
 
 target_include_directories(chatlib PRIVATE ${PROJECT_ROOT}/source)
 
-set(Boost_USE_STATIC_LIBS ON)
-hunter_add_package(Boost)
-find_package(Boost REQUIRED)
-target_include_directories(chatlib PUBLIC ${Boost_INCLUDE_DIRS})
+# Add third party libraries here.
+# Boost header-only libraries already added by scapix lib.
+
+#hunter_add_package(Boost)
+#find_package(Boost REQUIRED)
+#target_link_libraries(chatlib PUBLIC Boost::boost)
 
 # call scapix_bridge_headers() after all target_include_directories and target_link_libraries
 add_subdirectory(${SCAPIX_ROOT}/project/cmake ${PROJECT_BINARY_DIR}/scapix)
