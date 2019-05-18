@@ -55,6 +55,9 @@ endif()
 
 add_library(chatlib ${LIBRARY_TYPE} ${chat_sources} ${platforms_sources} ${platform_sources})
 
+# https://github.com/ruslo/hunter/issues/542
+set_target_properties(chatlib PROPERTIES DEBUG_POSTFIX "")
+
 # JVM on MacOS looks for native libs with .dylib extension
 if(APPLE AND ${SCAPIX_BRIDGE} STREQUAL java)
     set_target_properties(chatlib PROPERTIES SUFFIX ".dylib")
