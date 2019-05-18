@@ -8,8 +8,8 @@ On the fly code generation to bridge C++ to Java, Objective-C, Swift and Python.
 ### Install
 
 ```bash
-mkdir scapix
-cd scapix
+$ mkdir scapix
+$ cd scapix
 $ git clone https://github.com/scapix-com/example1
 $ git clone https://github.com/scapix-com/scapix
 ```
@@ -18,8 +18,6 @@ $ git clone https://github.com/scapix-com/scapix
 
 - Run one of the scripts in **project** folder to create library project (chatlib).
 - Open corresponding platform specific application project in **ui** folder (chat).
-
-Note: when building for the first time, you may need to press 'Build' twice: first time to generate bridge code, second time to build target.
 
 #### iOS
 
@@ -47,8 +45,8 @@ On Mac if `/usr/include` folder is missing, run `xcode-select --install` (Mojave
 
 - brew install python3
 - Run: **example1/project/xcode_mac_python.sh**
-- Open and build in Xcode: **example1/project/build/xcode_mac_python/chatlib.xcodeproj**
-- Test by running **example1/ui/python/run.py**
+- To edit and rebuild C++ code, open in Xcode: **example1/project/build/xcode_mac_python/chatlib.xcodeproj**
+- To test, run: **example1/ui/python/run.py**
 
 ```bash
 cd example1/project/build/xcode_mac_python/Debug
@@ -63,8 +61,8 @@ c.name()
 
 - Install [python3](https://www.python.org/downloads/windows/)
 - Run: **example1\project\vs_python.cmd**
-- Open and build in Visual Studio: **example1\project\build\vs_python\chatlib.sln**
-- Test by running **example1\ui\python\run.py**
+- To edit and rebuild C++ code, open in Visual Studio: **example1\project\build\vs_python\chatlib.sln**
+- To test, run: **example1\ui\python\run.py**
 
 ```bash
 cd example1\project\build\vs_python\Debug
