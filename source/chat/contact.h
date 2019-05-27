@@ -30,6 +30,7 @@ class contact : public scapix::bridge::object<contact>
 public:
 
 	contact() {}
+	contact(int, float) {}
 	contact(const std::string& id, const std::string& name) : id_(id), name_(name) {}
 
     std::string device_name() const { return platform::device().name(); }
@@ -48,6 +49,11 @@ public:
 
 //	void register_event_handler(std::shared_ptr<contact_events> handler) {}
 	void register_on_name_change(std::function<void(std::string)> handler) {}
+
+protected:
+
+	void protected_func(){}
+	void protected_func(int){}
 
 private:
 

@@ -39,5 +39,11 @@ public final class Chat
 		int[] myIntArray = {1,2,3};
 		int[] ints = session.ints(myIntArray);
 		System.out.println(java.util.Arrays.toString(ints));
+
+		Element elem = new Element();
+		elem.toString();
+
+		ExtendedContact ex = new ExtendedContact();
+		ex.protectedFunc();
 	}
 }

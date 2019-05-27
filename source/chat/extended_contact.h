@@ -16,7 +16,30 @@ class extended_contact : public contact
 {
 public:
 
+	using contact::contact;
+	extended_contact(int):contact("1", "2"){}
+	extended_contact() = default;
+
 	void test(std::string, std::shared_ptr<contact>, std::shared_ptr<extended_contact>) {}
+
+	using contact::protected_func;
+	using contact::id;
+
+};
+
+class extended_contact2 : public extended_contact
+{
+public:
+
+	void test() {}
+
+};
+
+class extended_contact3 : public contact
+{
+public:
+
+	void test() {}
 
 };
 
