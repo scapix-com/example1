@@ -7,18 +7,18 @@ chat/folder/element.h
 #ifndef CHAT_FOLDER_ELEMENT_H
 #define CHAT_FOLDER_ELEMENT_H
 
-#include <scapix/bridge/object.h>
+#include <chat/folder/abstruct_element.h>
 #include <chat/contact.h>
 
 namespace chat::folder {
 
-class element : public scapix::bridge::object<element>
+class element : public abstruct_element
 {
 public:
 
-	void func1(std::string id, std::string password) {}
+	void func1() override {}
 	void func2(std::shared_ptr<contact>) {}
-	std::shared_ptr<contact> func3() { return {}; }
+//	std::shared_ptr<contact> func3() { return {}; }
 
 };
 

@@ -90,5 +90,6 @@ scapix_bridge_headers(
     "${PROJECT_ROOT}/source/chat/session.h"
     "${PROJECT_ROOT}/source/chat/model.h"
     "${PROJECT_ROOT}/source/chat/extended_contact.h"
-    "${PROJECT_ROOT}/source/chat/folder/element.h"
+    "${PROJECT_ROOT}/source/chat/folder/abstruct_element.h"
+	"${PROJECT_ROOT}/source/chat/folder/element.h"
 )
