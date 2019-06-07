@@ -5,6 +5,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '../../project/build/vs_
 sys.path.append(os.path.join(os.path.dirname(__file__), '../../project/build/vs_python/Release'))
 sys.path.append(os.path.join(os.path.dirname(__file__), '../../project/build/xcode_mac_python/Debug'))
 sys.path.append(os.path.join(os.path.dirname(__file__), '../../project/build/xcode_mac_python/Release'))
+sys.path.append(os.path.join(os.path.dirname(__file__), '../../project/build/default_python'))
 
 import chatlib
 
