@@ -48,15 +48,6 @@ On Mac if `/usr/include` folder is missing, run `xcode-select --install` (Mojave
 - To edit and rebuild C++ code, open in Xcode: **example1/project/build/xcode_mac_python/chatlib.xcodeproj**
 - To test, run: **example1/ui/python/run.py**
 
-```bash
-cd example1/project/build/xcode_mac_python/Debug
-python3
-import chatlib
-c = chatlib.Contact()
-c.name('hello')
-c.name()
-```
-
 #### Python (Windows)
 
 - Install [python3](https://www.python.org/downloads/windows/)
@@ -64,11 +55,8 @@ c.name()
 - To edit and rebuild C++ code, open in Visual Studio: **example1\project\build\vs_python\chatlib.sln**
 - To test, run: **example1\ui\python\run.py**
 
-```bash
-cd example1\project\build\vs_python\Debug
-python
-import chatlib
-c = chatlib.Contact()
-c.name('hello')
-c.name()
-```
+#### Python (Linux)
+
+- sudo apt install python3-dev
+- To build, run: **example1/project/default_python.sh**
+- To test, run: **example1/ui/python/run.py**
