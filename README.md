@@ -41,22 +41,36 @@ Windows: `cmake.dir=c\:\\Program Files\\CMake`
 On Windows [ninja.exe](https://github.com/ninja-build/ninja/releases) needs to be in PATH.\
 On Mac if `/usr/include` folder is missing, run `xcode-select --install` (Mojave: install package `/Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg`)
 
-#### Python (Mac)
+#### Python
 
-- brew install python3
-- Run: **example1/project/xcode_mac_python.sh**
-- To edit and rebuild C++ code, open in Xcode: **example1/project/build/xcode_mac_python/chatlib.xcodeproj**
-- To test, run: **example1/ui/python/run.py**
+**Mac:**
 
-#### Python (Windows)
+```bash
+$ brew install python3
+$ cd example1
+$ ./project/xcode_mac_python.sh
+$ ./ui/python/run.py
+```
 
-- Install [python3](https://www.python.org/downloads/windows/)
-- Run: **example1\project\vs_python.cmd**
-- To edit and rebuild C++ code, open in Visual Studio: **example1\project\build\vs_python\chatlib.sln**
-- To test, run: **example1\ui\python\run.py**
+Xcode project: `project/build/xcode_mac_python/chatlib.xcodeproj`
 
-#### Python (Linux)
+**Windows:**
 
-- sudo apt install python3-dev
-- To build, run: **example1/project/default_python.sh**
-- To test, run: **example1/ui/python/run.py**
+Install [python3](https://www.python.org/downloads/windows/)
+
+```cmd
+> cd example1
+> project\vs_python.cmd
+> ui\python\run.py
+```
+
+Visual Studio solution: `project\build\vs_python\chatlib.sln`
+
+**Linux:**
+
+```bash
+$ sudo apt install python3-dev
+$ cd example1
+$ ./project/default_python.sh
+$ ./ui/python/run.py
+```
