@@ -50,7 +50,8 @@ file(GLOB_RECURSE platform_sources CONFIGURE_DEPENDS
 )
 
 if(${SCAPIX_BRIDGE} STREQUAL java OR ${SCAPIX_BRIDGE} STREQUAL python)
-   set(LIBRARY_TYPE MODULE)
+    set(LIBRARY_TYPE MODULE)
+    set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 endif()
 
 add_library(chatlib ${LIBRARY_TYPE} ${chat_sources} ${platforms_sources} ${platform_sources})
