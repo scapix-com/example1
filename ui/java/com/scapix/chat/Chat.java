@@ -44,6 +44,6 @@ public final class Chat
 		elem.toString();
 
 		ExtendedContact ex = new ExtendedContact();
-		ex.protectedFunc();
+//		ex.protectedFunc();
 	}
 }

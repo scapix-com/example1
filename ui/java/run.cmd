@@ -1,1 +1,1 @@
-"c:\Program Files (x86)\Java\jdk1.7.0_55\bin\java.exe" -Djava.library.path="c:\documents\scapix\sample\chat\project\vs\Debug;c:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\redist\debug_nonredist\x86\Microsoft.VC140.DebugCRT" -classpath c:\documents\scapix\source;c:\documents\scapix\sample\chat\generated\bridge\java;. com.scapix.chat.Chat
+"c:\Program Files\Java\jdk1.8.0_152\bin\java.exe" -Djava.library.path="..\..\project\build\vs_java\Debug" -classpath ..\..\..\scapix\source;..\..\generated\bridge\java;. com.scapix.chat.Chat

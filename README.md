@@ -91,8 +91,6 @@ Xcode project: `project/build/xcode_mac_java/chatlib.xcodeproj`
 
 **Windows:**
 
-Note: because of MSVC bugs, this currently doesn't work. Need to change scripts to use Clang or GCC for Windows.
-
 Install [JDK](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
 ```cmd

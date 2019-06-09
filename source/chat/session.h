@@ -34,10 +34,10 @@ public:
 	session(const string_type&) {}
     session(std::vector<string_type>, int, int, int, int) {}
     session(int) {}
-    session(int, long) {}
+    session(int, long long) {}
     session(std::string&& s1, std::string&& s2) { strings_.push_back(s1); strings_.push_back(s2); }
     session(std::string&& s1, std::string&& s2, const int&) { strings_.push_back(s1); strings_.push_back(s2); }
-    session(std::string&& s1, std::string&& s2, const int&, long) { strings_.push_back(s1); strings_.push_back(s2); }
+    session(std::string&& s1, std::string&& s2, const int&, long long) { strings_.push_back(s1); strings_.push_back(s2); }
     session(std::string s1, std::string s2, std::string = "") { strings_.push_back(s1); strings_.push_back(s2); }
     session(std::function<void()> callback) {}
 
