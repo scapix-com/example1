@@ -74,3 +74,42 @@ $ cd example1
 $ ./project/default_python.sh
 $ ./ui/python/run.py
 ```
+
+#### Java
+
+**Mac:**
+
+```bash
+$ brew cask install java
+$ cd example1
+$ ./project/xcode_mac_java.sh
+$ ./ui/java/compile.sh
+$ ./ui/java/run.sh
+```
+
+Xcode project: `project/build/xcode_mac_java/chatlib.xcodeproj`
+
+**Windows:**
+
+Note: because of MSVC bugs, this currently doesn't work. Need to change scripts to use Clang or GCC for Windows.
+
+Install [JDK](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
+
+```cmd
+> cd example1
+> project\vs_java.cmd
+> ui\java\compile.cmd
+> ui\java\run.cmd
+```
+
+Visual Studio solution: `project\build\vs_java\chatlib.sln`
+
+**Linux:**
+
+```bash
+$ sudo apt install default-jdk
+$ cd example1
+$ ./project/default_java.sh
+$ ./ui/java/compile.sh
+$ ./ui/java/run.sh
+```
