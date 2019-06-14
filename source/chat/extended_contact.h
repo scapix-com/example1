@@ -12,6 +12,8 @@ chat/extended_contact.h
 
 namespace chat {
 
+class contact;
+
 class extended_contact : public contact
 {
 public:

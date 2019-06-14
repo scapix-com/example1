@@ -25,6 +25,8 @@ public:
 };
 */
 
+class contact;
+
 class contact : public scapix::bridge::object<contact>
 {
 public:
