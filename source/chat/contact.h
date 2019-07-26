@@ -32,7 +32,7 @@ class contact : public scapix::bridge::object<contact>
 public:
 
 	contact() {}
-	contact(int, float) {}
+//	contact(int, float) {}
 	contact(const std::string& id, const std::string& name) : id_(id), name_(name) {}
 
     std::string device_name() const { return platform::device().name(); }

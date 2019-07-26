@@ -19,6 +19,12 @@ HunterGate(
 
 project(chatlib CXX)
 
+# hunter complains
+if(EMSCRIPTEN)
+    set(CMAKE_C_ABI_COMPILED TRUE)
+    set(CMAKE_CXX_ABI_COMPILED TRUE)
+endif()
+
 set(SCAPIX_BRIDGE "java" CACHE STRING "cpp, java, objc, python")
 set(SCAPIX_PLATFORM "windows" CACHE STRING "one of the folders inside 'source/chat/platform': ios, android, macos, windows, linux, etc.")
 set(SCAPIX_JAVA_API "android-28" CACHE STRING "one of the folders inside 'scapix/java_api': jdk-11.0.2, android-28, etc.")
@@ -49,12 +55,18 @@ file(GLOB_RECURSE platform_sources CONFIGURE_DEPENDS
 	${PROJECT_ROOT}/source/chat/platform/${SCAPIX_PLATFORM}/*.*
 )
 
-if(${SCAPIX_BRIDGE} STREQUAL java OR ${SCAPIX_BRIDGE} STREQUAL python)
-    set(LIBRARY_TYPE MODULE)
-    set(CMAKE_POSITION_INDEPENDENT_CODE ON)
-endif()
+if(EMSCRIPTEN)
+    add_executable(chatlib ${chat_sources} ${platforms_sources} ${platform_sources})
+    target_link_options(chatlib PRIVATE --bind)
+#   target_link_options(chatlib PRIVATE --emrun)
+else()
+    if(${SCAPIX_BRIDGE} STREQUAL java OR ${SCAPIX_BRIDGE} STREQUAL python)
+        set(LIBRARY_TYPE MODULE)
+        set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+    endif()
 
-add_library(chatlib ${LIBRARY_TYPE} ${chat_sources} ${platforms_sources} ${platform_sources})
+    add_library(chatlib ${LIBRARY_TYPE} ${chat_sources} ${platforms_sources} ${platform_sources})
+endif()
 
 # https://github.com/ruslo/hunter/issues/542
 set_target_properties(chatlib PROPERTIES DEBUG_POSTFIX "")

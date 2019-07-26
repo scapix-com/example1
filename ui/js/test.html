@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+  </head>
+  <body>
+    <script async type="text/javascript" src="/project/build/emscripten/chatlib.js"></script>
+    <script>
+    var Module = {
+      onRuntimeInitialized: function() {
+        var c = new Module.Contact("Hello Scapix", "hello world");
+        c.name("Hello Scapix JS");
+        console.log('X result: ' + c.name());
+
+        var s = new Module.Session();
+        s.addContact(c);
+        s.addContact(c);
+
+        var contacts = s.contacts();
+        console.log("contacts: ", contacts);
+
+        for (i of contacts)
+        {
+          console.log("vector value: ", i.name());
+        }
+
+        console.log("ints: ", s.ints([5,6,7,8]));
+
+        map = new Map;
+        map.set("from js 1", c);
+        map.set("from js 2", c);
+        map.set("from js 3", c);
+        map = s.map(map);
+
+        console.log("map: ", map);
+
+        for (i of map)
+        {
+          console.log("map key: ", i[0], " value: ", i[1].name());
+        }
+
+        s.testException(function()
+        {
+          console.log('inside JS lambda');
+        });
+
+        s.delete();
+        c.delete();
+      }
+    };
+    </script>
+  </body>
+</html>
