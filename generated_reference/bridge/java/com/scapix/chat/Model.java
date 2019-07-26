@@ -3,9 +3,10 @@
 
 package com.scapix.chat;
 
-public final class Model extends com.scapix.Bridge
+public class Model extends com.scapix.Bridge
 {
-	public Model() { _init(); }
+	public Model() { super(nop); _init(); }
+
 	public native void connect(java.lang.String id, java.lang.String password);
 	public native void disconnect();
 	public native Contact[] friends();
@@ -16,6 +17,6 @@ public final class Model extends com.scapix.Bridge
 	public native Session sessionWithContact(Contact contact);
 
 	private native void _init();
-	private Model(Tag tag) {}
+	protected Model(Nop nop) { super(nop); }
 	static { System.loadLibrary("chatlib"); }
 }

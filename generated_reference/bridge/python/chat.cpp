@@ -5,6 +5,9 @@
 void scapix_python_export_contact(pybind11::module& m);
 void scapix_python_export_session(pybind11::module& m);
 void scapix_python_export_model(pybind11::module& m);
+void scapix_python_export_extended_contact(pybind11::module& m);
+void scapix_python_export_abstruct_element(pybind11::module& m);
+void scapix_python_export_element(pybind11::module& m);
 
 PYBIND11_MODULE(chatlib, m)
 {
@@ -12,4 +15,7 @@ PYBIND11_MODULE(chatlib, m)
     scapix_python_export_contact(m);
     scapix_python_export_session(m);
     scapix_python_export_model(m);
+    scapix_python_export_extended_contact(m);
+    scapix_python_export_abstruct_element(m);
+    scapix_python_export_element(m);
 }

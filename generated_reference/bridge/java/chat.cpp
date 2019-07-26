@@ -5,6 +5,9 @@
 void scapix_java_export_contact();
 void scapix_java_export_session();
 void scapix_java_export_model();
+void scapix_java_export_extended_contact();
+void scapix_java_export_abstruct_element();
+void scapix_java_export_element();
 
 JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM* vm, void* reserved)
 {
@@ -15,6 +18,9 @@ JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM* vm, void* reserved)
     scapix_java_export_contact();
     scapix_java_export_session();
     scapix_java_export_model();
+    scapix_java_export_extended_contact();
+    scapix_java_export_abstruct_element();
+    scapix_java_export_element();
 
     return result;
   }

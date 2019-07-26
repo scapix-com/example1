@@ -64,7 +64,7 @@ void scapix_java_export_session()
 		<
 			SCAPIX_META_STRING("_init"),
 			void(jint, jlong),
-			void(scapix::bridge::java::init<chat::session>::*)(int, long),
+			void(scapix::bridge::java::init<chat::session>::*)(int, long long),
 			&scapix::bridge::java::init<chat::session>::create
 		>,
 
@@ -80,7 +80,7 @@ void scapix_java_export_session()
 		<
 			SCAPIX_META_STRING("_init"),
 			void(scapix::link::java::ref<SCAPIX_META_STRING("java/lang/String")>, scapix::link::java::ref<SCAPIX_META_STRING("java/lang/String")>, jint, jlong),
-			void(scapix::bridge::java::init<chat::session>::*)(std::basic_string<char> &&, std::basic_string<char> &&, const int &, long),
+			void(scapix::bridge::java::init<chat::session>::*)(std::basic_string<char> &&, std::basic_string<char> &&, const int &, long long),
 			&scapix::bridge::java::init<chat::session>::create
 		>,
 
@@ -207,7 +207,7 @@ void scapix_java_export_session()
 		scapix::link::java::native_method
 		<
 			SCAPIX_META_STRING("asyncConnect"),
-			void(scapix::link::java::ref<SCAPIX_META_STRING("java/lang/String")>, scapix::link::java::ref<scapix::link::java::function<SCAPIX_META_STRING("com/scapix/chat/Session$Function1"), void(scapix::link::java::ref<SCAPIX_META_STRING("java/lang/String")>)>>),
+			void(scapix::link::java::ref<SCAPIX_META_STRING("java/lang/String")>, scapix::link::java::ref<scapix::link::java::function<SCAPIX_META_STRING("com/scapix/chat/Session$Function0"), void(scapix::link::java::ref<SCAPIX_META_STRING("java/lang/String")>)>>),
 			void(chat::session::*)(std::basic_string<char>, std::function<void (std::basic_string<char>)>),
 			&chat::session::async_connect
 		>,
@@ -383,7 +383,7 @@ void scapix_java_export_session()
 		scapix::link::java::native_method
 		<
 			SCAPIX_META_STRING("connect"),
-			jint(scapix::link::java::ref<scapix::link::java::function<SCAPIX_META_STRING("com/scapix/chat/Session$Function2"), jint(scapix::link::java::ref<SCAPIX_META_STRING("java/lang/String")>, scapix::link::java::ref<scapix::link::java::array<SCAPIX_META_STRING("com/scapix/chat/Contact")>>)>>),
+			jint(scapix::link::java::ref<scapix::link::java::function<SCAPIX_META_STRING("com/scapix/chat/Session$Function1"), jint(scapix::link::java::ref<SCAPIX_META_STRING("java/lang/String")>, scapix::link::java::ref<scapix::link::java::array<SCAPIX_META_STRING("com/scapix/chat/Contact")>>)>>),
 			int(chat::session::*)(std::function<int (std::basic_string<char>, std::vector<std::shared_ptr<chat::contact>, std::allocator<std::shared_ptr<chat::contact> > >)>),
 			&chat::session::connect
 		>,
@@ -391,7 +391,7 @@ void scapix_java_export_session()
 		scapix::link::java::native_method
 		<
 			SCAPIX_META_STRING("connect2"),
-			void(scapix::link::java::ref<scapix::link::java::function<SCAPIX_META_STRING("com/scapix/chat/Session$Function2"), jint(scapix::link::java::ref<SCAPIX_META_STRING("java/lang/String")>, scapix::link::java::ref<scapix::link::java::array<SCAPIX_META_STRING("com/scapix/chat/Contact")>>)>>),
+			void(scapix::link::java::ref<scapix::link::java::function<SCAPIX_META_STRING("com/scapix/chat/Session$Function1"), jint(scapix::link::java::ref<SCAPIX_META_STRING("java/lang/String")>, scapix::link::java::ref<scapix::link::java::array<SCAPIX_META_STRING("com/scapix/chat/Contact")>>)>>),
 			void(chat::session::*)(std::function<int (std::basic_string<char>, std::vector<std::shared_ptr<chat::contact>, std::allocator<std::shared_ptr<chat::contact> > >)>),
 			&chat::session::connect2
 		>,
@@ -399,7 +399,7 @@ void scapix_java_export_session()
 		scapix::link::java::native_method
 		<
 			SCAPIX_META_STRING("connect3"),
-			void(scapix::link::java::ref<scapix::link::java::function<SCAPIX_META_STRING("com/scapix/chat/Session$Function3"), scapix::link::java::ref<SCAPIX_META_STRING("java/lang/String")>(scapix::link::java::ref<SCAPIX_META_STRING("java/lang/String")>, scapix::link::java::ref<scapix::link::java::array<SCAPIX_META_STRING("com/scapix/chat/Contact")>>)>>),
+			void(scapix::link::java::ref<scapix::link::java::function<SCAPIX_META_STRING("com/scapix/chat/Session$Function2"), scapix::link::java::ref<SCAPIX_META_STRING("java/lang/String")>(scapix::link::java::ref<SCAPIX_META_STRING("java/lang/String")>, scapix::link::java::ref<scapix::link::java::array<SCAPIX_META_STRING("com/scapix/chat/Contact")>>)>>),
 			void(chat::session::*)(std::function<std::basic_string<char> (std::basic_string<char>, std::vector<std::shared_ptr<chat::contact>, std::allocator<std::shared_ptr<chat::contact> > >)>),
 			&chat::session::connect3
 		>,
@@ -407,7 +407,7 @@ void scapix_java_export_session()
 		scapix::link::java::native_method
 		<
 			SCAPIX_META_STRING("connect4"),
-			void(scapix::link::java::ref<scapix::link::java::function<SCAPIX_META_STRING("com/scapix/chat/Session$Function4"), scapix::link::java::ref<SCAPIX_META_STRING("java/lang/String")>(jint, scapix::link::java::ref<scapix::link::java::array<SCAPIX_META_STRING("com/scapix/chat/Contact")>>)>>),
+			void(scapix::link::java::ref<scapix::link::java::function<SCAPIX_META_STRING("com/scapix/chat/Session$Function3"), scapix::link::java::ref<SCAPIX_META_STRING("java/lang/String")>(jint, scapix::link::java::ref<scapix::link::java::array<SCAPIX_META_STRING("com/scapix/chat/Contact")>>)>>),
 			void(chat::session::*)(std::function<std::basic_string<char> (int, std::vector<std::shared_ptr<chat::contact>, std::allocator<std::shared_ptr<chat::contact> > >)>),
 			&chat::session::connect4
 		>,
@@ -415,7 +415,7 @@ void scapix_java_export_session()
 		scapix::link::java::native_method
 		<
 			SCAPIX_META_STRING("connect7"),
-			void(scapix::link::java::ref<scapix::link::java::array<scapix::link::java::array<scapix::link::java::function<SCAPIX_META_STRING("com/scapix/chat/Session$Function0"), void()>>>>),
+			void(scapix::link::java::ref<scapix::link::java::array<scapix::link::java::array<scapix::link::java::function<SCAPIX_META_STRING("com/scapix/chat/Session$Function4"), void()>>>>),
 			void(chat::session::*)(std::vector<std::vector<std::function<void ()>, std::allocator<std::function<void ()> > >, std::allocator<std::vector<std::function<void ()>, std::allocator<std::function<void ()> > > > >),
 			&chat::session::connect7
 		>,
@@ -431,7 +431,7 @@ void scapix_java_export_session()
 		scapix::link::java::native_method
 		<
 			SCAPIX_META_STRING("testException"),
-			void(scapix::link::java::ref<scapix::link::java::function<SCAPIX_META_STRING("com/scapix/chat/Session$Function0"), void()>>),
+			void(scapix::link::java::ref<scapix::link::java::function<SCAPIX_META_STRING("com/scapix/chat/Session$Function4"), void()>>),
 			void(chat::session::*)(std::function<void ()>),
 			&chat::session::test_exception
 		>,
@@ -459,6 +459,14 @@ void scapix_java_export_session()
 
 		scapix::link::java::native_method
 		<
+			SCAPIX_META_STRING("_init"),
+			void(),
+			void(scapix::bridge::java::init<chat::session2>::*)(),
+			&scapix::bridge::java::init<chat::session2>::create
+		>,
+
+		scapix::link::java::native_method
+		<
 			SCAPIX_META_STRING("addContact"),
 			void(scapix::link::java::ref<SCAPIX_META_STRING("com/scapix/chat/Contact")>),
 			void(chat::session2::*)(std::shared_ptr<chat::contact>),
@@ -479,14 +487,6 @@ void scapix_java_export_session()
 			void(scapix::link::java::ref<SCAPIX_META_STRING("com/scapix/chat/Session2")>),
 			void(chat::session2::*)(std::shared_ptr<chat::session2>),
 			&chat::session2::add_session2
-		>,
-
-		scapix::link::java::native_method
-		<
-			SCAPIX_META_STRING("_init"),
-			void(),
-			void(scapix::bridge::java::init<chat::session2>::*)(),
-			&scapix::bridge::java::init<chat::session2>::create
 		>
 	>::register_();
 }

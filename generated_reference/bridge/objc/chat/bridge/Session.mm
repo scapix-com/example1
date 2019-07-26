@@ -22,9 +22,9 @@
 	return scapix::bridge::objc::init<chat::session, void(std::vector<std::basic_string<char>, std::allocator<std::basic_string<char> > >, int, int, int, int)>(self, p1, p2, p3, p4, p5);
 }
 
--(instancetype)initWithP1:(int)p1 p2:(long)p2
+-(instancetype)initWithP1:(int)p1 p2:(long long)p2
 {
-	return scapix::bridge::objc::init<chat::session, void(int, long)>(self, p1, p2);
+	return scapix::bridge::objc::init<chat::session, void(int, long long)>(self, p1, p2);
 }
 
 -(instancetype)initWithS1:(NSString*)s1 s2:(NSString*)s2 p3:(int)p3
@@ -32,9 +32,9 @@
 	return scapix::bridge::objc::init<chat::session, void(std::basic_string<char> &&, std::basic_string<char> &&, const int &)>(self, s1, s2, p3);
 }
 
--(instancetype)initWithS1:(NSString*)s1 s2:(NSString*)s2 p3:(int)p3 p4:(long)p4
+-(instancetype)initWithS1:(NSString*)s1 s2:(NSString*)s2 p3:(int)p3 p4:(long long)p4
 {
-	return scapix::bridge::objc::init<chat::session, void(std::basic_string<char> &&, std::basic_string<char> &&, const int &, long)>(self, s1, s2, p3, p4);
+	return scapix::bridge::objc::init<chat::session, void(std::basic_string<char> &&, std::basic_string<char> &&, const int &, long long)>(self, s1, s2, p3, p4);
 }
 
 -(NSString*)string:(NSString*)filter
@@ -271,6 +271,11 @@
 
 @implementation Session2
 
+-(instancetype)init
+{
+	return scapix::bridge::objc::init<chat::session2, void()>(self);
+}
+
 -(void)addContact:(Contact*)contact
 {
 	return scapix::bridge::objc::call<void(chat::session2::*)(std::shared_ptr<chat::contact>), &chat::session2::add_contact, void>(self, contact);
@@ -284,11 +289,6 @@
 -(void)addSession2:(Session2*)session
 {
 	return scapix::bridge::objc::call<void(chat::session2::*)(std::shared_ptr<chat::session2>), &chat::session2::add_session2, void>(self, session);
-}
-
--(instancetype)init
-{
-	return scapix::bridge::objc::init<chat::session2, void()>(self);
 }
 
 @end

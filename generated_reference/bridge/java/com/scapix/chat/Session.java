@@ -3,48 +3,49 @@
 
 package com.scapix.chat;
 
-public final class Session extends com.scapix.Bridge
+public class Session extends com.scapix.Bridge
 {
 	@FunctionalInterface
-	public static interface Function1
+	public static interface Function0
 	{
 		void call(java.lang.String p1);
 	}
 
 	@FunctionalInterface
-	public static interface Function2
+	public static interface Function1
 	{
 		int call(java.lang.String p1, Contact[] p2);
 	}
 
 	@FunctionalInterface
-	public static interface Function3
+	public static interface Function2
 	{
 		java.lang.String call(java.lang.String p1, Contact[] p2);
 	}
 
 	@FunctionalInterface
-	public static interface Function4
+	public static interface Function3
 	{
 		java.lang.String call(int p1, Contact[] p2);
 	}
 
 	@FunctionalInterface
-	public static interface Function0
+	public static interface Function4
 	{
 		void call();
 	}
 
-	public Session() { _init(); }
-	public Session(java.lang.String p1) { _init(p1); }
-	public Session(java.lang.String[] p1, int p2, int p3, int p4, int p5) { _init(p1, p2, p3, p4, p5); }
-//	public Session(int p1) { _init(p1); }
-	public Session(int p1, long p2) { _init(p1, p2); }
-//	public Session(java.lang.String s1, java.lang.String s2) { _init(s1, s2); }
-	public Session(java.lang.String s1, java.lang.String s2, int p3) { _init(s1, s2, p3); }
-	public Session(java.lang.String s1, java.lang.String s2, int p3, long p4) { _init(s1, s2, p3, p4); }
-//	public Session(java.lang.String s1, java.lang.String s2, java.lang.String p3) { _init(s1, s2, p3); }
-//	public Session(Function0 callback) { _init(callback); }
+	public Session() { super(nop); _init(); }
+	public Session(java.lang.String p1) { super(nop); _init(p1); }
+	public Session(java.lang.String[] p1, int p2, int p3, int p4, int p5) { super(nop); _init(p1, p2, p3, p4, p5); }
+//	public Session(int p1) { super(nop); _init(p1); }
+	public Session(int p1, long p2) { super(nop); _init(p1, p2); }
+//	public Session(java.lang.String s1, java.lang.String s2) { super(nop); _init(s1, s2); }
+	public Session(java.lang.String s1, java.lang.String s2, int p3) { super(nop); _init(s1, s2, p3); }
+	public Session(java.lang.String s1, java.lang.String s2, int p3, long p4) { super(nop); _init(s1, s2, p3, p4); }
+//	public Session(java.lang.String s1, java.lang.String s2, java.lang.String p3) { super(nop); _init(s1, s2, p3); }
+//	public Session(Function4 callback) { super(nop); _init(callback); }
+
 	public native java.lang.String string(java.lang.String filter);
 //	public native java.lang.String string(java.lang.String filter);
 //	public native !UNKNOWN! string(!UNKNOWN! filter);
@@ -72,7 +73,7 @@ public final class Session extends com.scapix.Bridge
 //	public native void testUnsupportedParamType(int p1, !UNKNOWN! p2);
 //	public native void testUnsupportedParamType(java.lang.String p1, !UNKNOWN! p2);
 	public native void aliasTest(java.lang.String s1, java.lang.String s2, int i1, int i2);
-	public native void asyncConnect(java.lang.String host, Function1 handler);
+	public native void asyncConnect(java.lang.String host, Function0 handler);
 	public native Contact[] contacts();
 	public native Contact[] contacts(java.lang.String filter);
 	public native java.util.TreeMap<java.lang.String, Contact> map(java.util.TreeMap<java.lang.String, Contact> m);
@@ -95,13 +96,13 @@ public final class Session extends com.scapix.Bridge
 	public native Contact sample2(boolean p1, short p2, int p3, float p4, double p5);
 	public native static void sample();
 	public native static int sample(java.lang.String p1, java.lang.String[] p2);
-	public native int connect(Function2 handler);
-	public native void connect2(Function2 handler);
-	public native void connect3(Function3 handler);
-	public native void connect4(Function4 handler);
-	public native void connect7(Function0[][] p1);
+	public native int connect(Function1 handler);
+	public native void connect2(Function1 handler);
+	public native void connect3(Function2 handler);
+	public native void connect4(Function3 handler);
+	public native void connect7(Function4[][] p1);
 	public native void connect8(java.lang.String[][] p1);
-	public native void testException(Function0 callback);
+	public native void testException(Function4 callback);
 	public native void throwException();
 	public native java.lang.String[] strings();
 
@@ -111,18 +112,19 @@ public final class Session extends com.scapix.Bridge
 	private native void _init(int p1, long p2);
 	private native void _init(java.lang.String s1, java.lang.String s2, int p3);
 	private native void _init(java.lang.String s1, java.lang.String s2, int p3, long p4);
-	private Session(Tag tag) {}
+	protected Session(Nop nop) { super(nop); }
 	static { System.loadLibrary("chatlib"); }
 }
 
-final class Session2 extends com.scapix.Bridge
+class Session2 extends com.scapix.Bridge
 {
+	public Session2() { super(nop); _init(); }
+
 	public native void addContact(Contact contact);
 	public native void addSession(Session session);
 	public native void addSession2(Session2 session);
-	public Session2() { _init(); }
 
 	private native void _init();
-	private Session2(Tag tag) {}
+	protected Session2(Nop nop) { super(nop); }
 	static { System.loadLibrary("chatlib"); }
 }

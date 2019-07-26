@@ -3,7 +3,7 @@
 
 package com.scapix.chat;
 
-public final class Contact extends com.scapix.Bridge
+public class Contact extends com.scapix.Bridge
 {
 	@FunctionalInterface
 	public static interface Function0
@@ -11,8 +11,9 @@ public final class Contact extends com.scapix.Bridge
 		void call(java.lang.String p1);
 	}
 
-	public Contact() { _init(); }
-	public Contact(java.lang.String id, java.lang.String name) { _init(id, name); }
+	public Contact() { super(nop); _init(); }
+	public Contact(java.lang.String id, java.lang.String name) { super(nop); _init(id, name); }
+
 	public native java.lang.String deviceName();
 	public native java.lang.String id();
 	public native void id(java.lang.String id);
@@ -24,6 +25,6 @@ public final class Contact extends com.scapix.Bridge
 
 	private native void _init();
 	private native void _init(java.lang.String id, java.lang.String name);
-	private Contact(Tag tag) {}
+	protected Contact(Nop nop) { super(nop); }
 	static { System.loadLibrary("chatlib"); }
 }

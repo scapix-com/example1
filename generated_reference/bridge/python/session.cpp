@@ -10,9 +10,9 @@ void scapix_python_export_session(pybind11::module& m)
 		.def(pybind11::init<>())
 		.def(pybind11::init<const std::basic_string<char> &>())
 		.def(pybind11::init<std::vector<std::basic_string<char>, std::allocator<std::basic_string<char> > >, int, int, int, int>())
-		.def(pybind11::init<int, long>())
+		.def(pybind11::init<int, long long>())
 		.def(pybind11::init<std::basic_string<char> &&, std::basic_string<char> &&, const int &>())
-		.def(pybind11::init<std::basic_string<char> &&, std::basic_string<char> &&, const int &, long>())
+		.def(pybind11::init<std::basic_string<char> &&, std::basic_string<char> &&, const int &, long long>())
 		.def<std::basic_string<char>(chat::session::*)(std::basic_string<char>)>("string", &chat::session::string)
 		.def<void(chat::session::*)(int)>("test_java_keyword", &chat::session::test_java_keyword)
 		.def<void(chat::session::*)()>("synchronized", &chat::session::synchronized)
@@ -62,9 +62,9 @@ void scapix_python_export_session(pybind11::module& m)
 	;
 
 	pybind11::class_<chat::session2, std::shared_ptr<chat::session2>>(m, "Session2")
+		.def(pybind11::init<>())
 		.def<void(chat::session2::*)(std::shared_ptr<chat::contact>)>("add_contact", &chat::session2::add_contact)
 		.def<void(chat::session2::*)(std::shared_ptr<chat::session>)>("add_session", &chat::session2::add_session)
 		.def<void(chat::session2::*)(std::shared_ptr<chat::session2>)>("add_session2", &chat::session2::add_session2)
-		.def(pybind11::init<>())
 	;
 }
