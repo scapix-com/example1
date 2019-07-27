@@ -111,3 +111,13 @@ $ ./project/default_java.sh
 $ ./ui/java/compile.sh
 $ ./ui/java/run.sh
 ```
+
+#### JavaScript (Emscripten)
+
+Install [Emscripten SDK](https://emscripten.org/docs/getting_started/downloads.html)
+
+```bash
+$ cd example1
+$ ./project/emscripten.sh
+$ ./ui/js/serve.sh
+```
