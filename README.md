@@ -2,8 +2,8 @@
 
 On the fly code generation to bridge C++ to `Java`, `Objective-C`, `Swift`, `Python` and `JavaScript` (Emscripten).
 
-1. Change your C++ files and press "Build" in the IDE.
-2. Call newly added C++ code from Java, Objective-C, Swift or Python.
+1. Change your C++ code and build your project (bindings generated as part of the build).
+2. Call newly changed C++ code from Java, Objective-C, Swift, Python or JavaScript.
 
 ### Install
 
