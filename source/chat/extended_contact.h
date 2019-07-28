@@ -24,9 +24,11 @@ public:
 
 	void test(std::string, std::shared_ptr<contact>, std::shared_ptr<extended_contact>) {}
 
-// msvc bug, emscripten bug
-//	using contact::protected_func;
-//	using contact::id;
+// msvc bug
+#ifndef _MSC_VER
+	using contact::protected_func;
+	using contact::id;
+#endif
 
 };
 

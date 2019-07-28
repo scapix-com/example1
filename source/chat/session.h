@@ -32,7 +32,7 @@ public:
 
 	session() {}
 	session(const string_type&) {}
-    session(std::vector<string_type>, int, int, int, int) {}
+    session(std::vector<string_type> vs, int, int, int, int) : strings_(vs) {}
     session(int) {}
     session(int, long long) {}
     session(std::string&& s1, std::string&& s2) { strings_.push_back(s1); strings_.push_back(s2); }

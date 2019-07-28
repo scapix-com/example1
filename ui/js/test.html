@@ -12,7 +12,8 @@
         c.name("Hello Scapix JS");
         console.log('X result: ' + c.name());
 
-        var s = new Module.Session();
+        var s = new Module.Session(["str1", "str2", "str3"], 1, 2, 3, 4);
+        console.log('s.strings(): ' + s.strings());
         s.addContact(c);
         s.addContact(c);
 
