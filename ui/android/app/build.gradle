@@ -17,9 +17,9 @@ android {
             cmake {
                 cppFlags "-std=c++17 -frtti -fexceptions -fsigned-char"
                 arguments "-DANDROID_STL=c++_shared",
-                        "-Dscapix_platform=android",
-                        "-Dscapix_bridge=java",
-                        "-Dscapix_java_api=android-28"
+                        "-DSCAPIX_PLATFORM=android",
+                        "-DSCAPIX_BRIDGE=java",
+                        "-DSCAPIX_JAVA_API=android-28"
             }
         }
     }
