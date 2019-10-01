@@ -15,6 +15,8 @@ class abstruct_element : public scapix::bridge::object<abstruct_element>
 {
 public:
 
+	virtual ~abstruct_element() {}
+
 	virtual void func1() = 0;
 	virtual void func2() {}
 	void func3() {}

@@ -17,8 +17,7 @@ class element : public abstruct_element
 public:
 
 	void func1() override {}
-	void func2(std::shared_ptr<contact>) {}
-//	std::shared_ptr<contact> func3() { return {}; }
+	void func4(std::shared_ptr<contact>) {}
 
 };
 
