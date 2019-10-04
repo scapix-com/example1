@@ -49,7 +49,7 @@ On Mac if `/usr/include` folder is missing, run `xcode-select --install` (Mojave
 $ brew install python3
 $ cd example1/project
 $ ./xcode_mac_python.sh
-$ cd ./../ui/python
+$ cd ../ui/python
 $ ./run.py
 ```
 
@@ -74,7 +74,7 @@ Visual Studio solution: `project\build\vs_python\chatlib.sln`
 $ sudo apt install python3-dev
 $ cd example1/project
 $ ./default_python.sh
-$ cd ./../ui/python
+$ cd ../ui/python
 $ ./run.py
 ```
 
@@ -125,6 +125,6 @@ Install [Emscripten SDK](https://emscripten.org/docs/getting_started/downloads.h
 ```bash
 $ cd example1/project
 $ ./emscripten.sh
-$ cd ./../ui/js
+$ cd ../ui/js
 $ ./serve.sh
 ```
