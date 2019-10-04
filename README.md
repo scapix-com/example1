@@ -47,9 +47,10 @@ On Mac if `/usr/include` folder is missing, run `xcode-select --install` (Mojave
 
 ```bash
 $ brew install python3
-$ cd example1
-$ ./project/xcode_mac_python.sh
-$ ./ui/python/run.py
+$ cd example1/project
+$ ./xcode_mac_python.sh
+$ cd ./../ui/python
+$ ./run.py
 ```
 
 Xcode project: `project/build/xcode_mac_python/chatlib.xcodeproj`
@@ -59,9 +60,10 @@ Xcode project: `project/build/xcode_mac_python/chatlib.xcodeproj`
 Install [python3](https://www.python.org/downloads/windows/)
 
 ```cmd
-> cd example1
-> project\vs_python.cmd
-> ui\python\run.py
+> cd example1\project
+> vs_python.cmd
+> cd ..\ui\python
+> run.py
 ```
 
 Visual Studio solution: `project\build\vs_python\chatlib.sln`
@@ -70,9 +72,10 @@ Visual Studio solution: `project\build\vs_python\chatlib.sln`
 
 ```bash
 $ sudo apt install python3-dev
-$ cd example1
-$ ./project/default_python.sh
-$ ./ui/python/run.py
+$ cd example1/project
+$ ./default_python.sh
+$ cd ./../ui/python
+$ ./run.py
 ```
 
 #### Java
@@ -81,10 +84,11 @@ $ ./ui/python/run.py
 
 ```bash
 $ brew cask install java
-$ cd example1
-$ ./project/xcode_mac_java.sh
-$ ./ui/java/compile.sh
-$ ./ui/java/run.sh
+$ cd example1/project
+$ ./xcode_mac_java.sh
+$ cd ../ui/java
+$ ./compile.sh
+$ ./run.sh
 ```
 
 Xcode project: `project/build/xcode_mac_java/chatlib.xcodeproj`
@@ -94,10 +98,11 @@ Xcode project: `project/build/xcode_mac_java/chatlib.xcodeproj`
 Install [JDK](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
 ```cmd
-> cd example1
-> project\vs_java.cmd
-> ui\java\compile.cmd
-> ui\java\run.cmd
+> cd example1\project
+> vs_java.cmd
+> cd ..\ui\java
+> compile.cmd
+> run.cmd
 ```
 
 Visual Studio solution: `project\build\vs_java\chatlib.sln`
@@ -106,10 +111,11 @@ Visual Studio solution: `project\build\vs_java\chatlib.sln`
 
 ```bash
 $ sudo apt install default-jdk
-$ cd example1
-$ ./project/default_java.sh
-$ ./ui/java/compile.sh
-$ ./ui/java/run.sh
+$ cd example1/project
+$ ./xcode_mac_java.sh
+$ cd ../ui/java
+$ ./compile.sh
+$ ./run.sh
 ```
 
 #### JavaScript (Emscripten)
@@ -117,7 +123,8 @@ $ ./ui/java/run.sh
 Install [Emscripten SDK](https://emscripten.org/docs/getting_started/downloads.html)
 
 ```bash
-$ cd example1
-$ ./project/emscripten.sh
-$ ./ui/js/serve.sh
+$ cd example1/project
+$ ./emscripten.sh
+$ cd ./../ui/js
+$ ./serve.sh
 ```
