@@ -29,8 +29,6 @@ set(SCAPIX_BRIDGE "java" CACHE STRING "cpp, java, objc, python")
 set(SCAPIX_PLATFORM "windows" CACHE STRING "one of the folders inside 'source/chat/platform': ios, android, macos, windows, linux, etc.")
 set(SCAPIX_JAVA_API "android-28" CACHE STRING "one of the folders inside 'scapix/java_api': jdk-11.0.2, android-28, etc.")
 
-include(${SCAPIX_ROOT}/project/cmake/modules/scapix.cmake)
-
 # chat_sources
 
 file(GLOB_RECURSE chat_sources CONFIGURE_DEPENDS
@@ -86,15 +84,15 @@ set_target_properties(chatlib PROPERTIES
 
 target_include_directories(chatlib PRIVATE ${PROJECT_ROOT}/source)
 
-# Add third party libraries here.
-# Boost header-only libraries already added by scapix lib.
+# Add third party libraries (https://www.scapix.com/documentation/cmake/dependencies/).
 
-#hunter_add_package(Boost)
-#find_package(Boost REQUIRED)
-#target_link_libraries(chatlib PUBLIC Boost::boost)
+hunter_add_package(Boost)
+find_package(Boost REQUIRED)
+target_link_libraries(chatlib PUBLIC Boost::boost)
 
-# call scapix_bridge_headers() after all target_include_directories and target_link_libraries
-add_subdirectory(${SCAPIX_ROOT}/project/cmake ${PROJECT_BINARY_DIR}/scapix)
+# Call scapix_bridge_headers() after all calls to target_include_directories() and target_link_libraries().
+
+include(${SCAPIX_ROOT}/project/cmake/modules/scapix.cmake)
 
 scapix_bridge_headers(
     chatlib
