@@ -55,6 +55,9 @@ public class MainActivity extends AppCompatActivity {
         hashSet.add("two");
         hashSet.add("three");
         java.util.HashSet<String> hashSet2 = s.unorderedSet(hashSet);
+
+        Element element = new Element();
+        element.func1();
     }
 
     @Override

@@ -62,7 +62,11 @@ class ViewController: NSViewController {
         
         let objc = TestObjC()
         objc.sample()
-    }
+
+        let element = Element()
+        element.func1()
+
+	}
     
     override var representedObject: Any? {
         didSet {

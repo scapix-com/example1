@@ -5,5 +5,6 @@
 #import "chat/bridge/Contact.h"
 #import "chat/bridge/Session.h"
 #import "chat/bridge/Model.h"
+#import "chat/bridge/Element.h"
 
 #import "TestObjC.h"
