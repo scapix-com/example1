@@ -42,6 +42,7 @@ public final class Chat
 
 		Element elem = new Element();
 		elem.toString();
+		elem.func1();
 
 		ExtendedContact ex = new ExtendedContact();
 //		ex.protectedFunc();
