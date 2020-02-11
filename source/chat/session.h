@@ -24,11 +24,13 @@ namespace chat {
 
 // test aliases
 using string_type = std::string;
-using integer = int;
+using integer16 = std::int16_t;
 
 class session : public scapix::bridge::object<session>
 {
 public:
+
+	using integer32 = std::int32_t;
 
 	session() {}
 	session(const string_type&) {}
@@ -41,7 +43,14 @@ public:
 	session(std::string s1, std::string s2, std::string = "") { strings_.push_back(s1); strings_.push_back(s2); }
 	session(std::function<void()> callback) {}
 
-//	void test_int(bool, const bool&, bool&&, int, const int&, int&&) {}
+	void int_test1(bool, std::int8_t, std::int16_t, std::int32_t, std::int64_t, integer16, integer32) {}
+	void int_test2(const std::int8_t&, const std::int16_t&, const std::int32_t&, const std::int64_t&, const integer16&, const integer32&) {}
+
+	// Python bridge has a bug with rvalue reference parameters (except in constructors), other bridges are fine.
+//	void int_test3(std::int8_t&&, std::int16_t&&, std::int32_t&&, std::int64_t&&, integer16&&, integer32&&) {}
+
+	// Using int types directly works, but generates non-portable (target specific) code.
+//	void int_test4(signed char, short, int, long, long long) {}
 
 	// In case of conflict, only the first overloaded function is bridged:
 
@@ -72,11 +81,6 @@ public:
 	void HELLO_HTTP2A333De8() {}
 	void HELLO_Http() {}
 
-	// test integers: prefer using std::intXX_t types for portability
-
-	void int_test1(std::int8_t, std::int16_t, std::int32_t, std::int64_t) {}
-	void int_test2(signed char, short, int, long, long long) {}
-
 	std::shared_ptr<contact> object(std::shared_ptr<contact> m) { return m; }
 	std::shared_ptr<std::string> object(std::shared_ptr<std::string> m) { return m; }
 	int object(int m) { return m; }
@@ -94,7 +98,7 @@ public:
 	void test_unsupported_param_type(int, int*) {}
 	void test_unsupported_param_type(std::string, boost::container::vector<int>) {}
 
-	void alias_test(std::string s1, string_type s2, int i1, integer i2) {}
+	void alias_test(std::string s1, string_type s2) {}
 
 	void async_connect(std::string host, std::function<void(string_type)> handler) {}
 
