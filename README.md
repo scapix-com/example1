@@ -8,10 +8,7 @@ On the fly code generation to bridge C++ to `Java`, `Objective-C`, `Swift`, `Pyt
 ### Install
 
 ```bash
-$ mkdir scapix
-$ cd scapix
 $ git clone https://github.com/scapix-com/example1
-$ git clone https://github.com/scapix-com/scapix
 ```
 
 ### Getting started
