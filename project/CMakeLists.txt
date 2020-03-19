@@ -10,9 +10,8 @@ set(CMODULE_CACHE_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/build/.cmodule CACHE PA
 include(FetchContent)
 FetchContent_Declare(
   cmodule
-  GIT_REPOSITORY https://github.com/scapix-com/cmodule.git
-  GIT_TAG        v1.0.0
-  GIT_SHALLOW    TRUE
+  URL "https://github.com/scapix-com/cmodule/archive/v1.0.1.tar.gz"
+  URL_HASH SHA256=4007104ddfb1d30a45a5feea62a0cd26cf4074f4e7d18dd3f47dc86c6e45cf5a
 )
 FetchContent_MakeAvailable(cmodule)
 
