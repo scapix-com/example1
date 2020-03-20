@@ -10,8 +10,8 @@ set(CMODULE_CACHE_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/build/.cmodule CACHE PA
 include(FetchContent)
 FetchContent_Declare(
   cmodule
-  URL "https://github.com/scapix-com/cmodule/archive/v1.0.2.tar.gz"
-  URL_HASH SHA256=e8c0dc9c61996e1442cefb5f118718dedf245e1cbb12b6a05aa5962b3fe9ab93
+  URL "https://github.com/scapix-com/cmodule/archive/v1.0.3.tar.gz"
+  URL_HASH SHA256=6bcd113186dd1d55a8c969213ee2dc472ffb403e8e121af03ff60244a0dad7a5
 )
 FetchContent_MakeAvailable(cmodule)
 
