@@ -19,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A10B51D524253CCC00B996BD /* scapix.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = scapix.xcconfig; path = ../../../project/build/xcode_ios_objc/scapix.xcconfig; sourceTree = "<group>"; };
 		A19B226A2248737300FE9722 /* chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A19B226D2248737300FE9722 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A19B226F2248737300FE9722 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		A19B22612248737200FE9722 = {
 			isa = PBXGroup;
 			children = (
+				A10B51D524253CCC00B996BD /* scapix.xcconfig */,
 				A19B226C2248737300FE9722 /* chat */,
 				A19B226B2248737300FE9722 /* Products */,
 				A19B2285224876A800FE9722 /* Frameworks */,
@@ -193,6 +195,7 @@
 /* Begin XCBuildConfiguration section */
 		A19B227A2248737300FE9722 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A10B51D524253CCC00B996BD /* scapix.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -244,7 +247,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					../../../../scapix/source,
+					"$(inherited)",
 					../../../generated/bridge/objc,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -259,6 +262,7 @@
 		};
 		A19B227B2248737300FE9722 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A10B51D524253CCC00B996BD /* scapix.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -304,7 +308,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					../../../../scapix/source,
+					"$(inherited)",
 					../../../generated/bridge/objc,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
