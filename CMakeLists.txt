@@ -15,13 +15,13 @@ set(SCAPIX_PLATFORM "windows" CACHE STRING "one of the folders inside 'source/ch
 set(SCAPIX_JAVA_API "android-28" CACHE STRING "one of the folders inside 'scapix/java_api': jdk-11.0.2, android-28, etc.")
 
 # demonstrate use of (optional) platform-dependent sources
-file(GLOB_RECURSE chat_sources CONFIGURE_DEPENDS source/chat/*.*)
+file(GLOB_RECURSE chat_sources CONFIGURE_DEPENDS "source/chat/*")
 list(FILTER chat_sources EXCLUDE REGEX "source/chat/platform/*")
-file(GLOB_RECURSE platforms_sources CONFIGURE_DEPENDS source/chat/platform/*.*)
+file(GLOB_RECURSE platforms_sources CONFIGURE_DEPENDS "source/chat/platform/*")
 list(FILTER platforms_sources EXCLUDE REGEX "source/chat/platform/${SCAPIX_PLATFORM}/*")
 set_source_files_properties(${platforms_sources} PROPERTIES HEADER_FILE_ONLY TRUE)
-file(GLOB_RECURSE platform_sources CONFIGURE_DEPENDS source/chat/platform/${SCAPIX_PLATFORM}/*.*)
-source_group(TREE source/chat PREFIX "source" FILES ${chat_sources} ${platforms_sources} ${platform_sources})
+file(GLOB_RECURSE platform_sources CONFIGURE_DEPENDS "source/chat/platform/${SCAPIX_PLATFORM}/*")
+source_group(TREE "${CMAKE_CURRENT_SOURCE_DIR}/source/chat" PREFIX "source" FILES ${chat_sources} ${platforms_sources} ${platform_sources})
 
 if(EMSCRIPTEN)
     add_executable(chatlib ${chat_sources} ${platforms_sources} ${platform_sources})
