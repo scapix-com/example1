@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A10B51D42425345B00B996BD /* scapix.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = scapix.xcconfig; path = ../../../project/build/xcode_mac_objc/scapix.xcconfig; sourceTree = "<group>"; };
+		A10B51D42425345B00B996BD /* scapix.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = scapix.xcconfig; path = ../../../build/xcode_mac_objc/scapix.xcconfig; sourceTree = "<group>"; };
 		A18CF12F224879340042F11D /* chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A18CF132224879340042F11D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A18CF134224879340042F11D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
