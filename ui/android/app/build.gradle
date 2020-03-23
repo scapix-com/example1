@@ -31,7 +31,7 @@ android {
     }
     externalNativeBuild {
         cmake {
-            path "../../../project/CMakeLists.txt"
+            path "../../../CMakeLists.txt"
         }
     }
     sourceSets {
