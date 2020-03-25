@@ -16,7 +16,6 @@ chat/session.h
 #include <unordered_set>
 #include <scapix/bridge/object.h>
 #include <chat/contact.h>
-#include <boost/container/vector.hpp>
 
 #include <iostream>
 
@@ -96,7 +95,6 @@ public:
 
 	int* test_unsupported_param_type() { return {}; }
 	void test_unsupported_param_type(int, int*) {}
-	void test_unsupported_param_type(std::string, boost::container::vector<int>) {}
 
 	void alias_test(std::string s1, string_type s2) {}
 
