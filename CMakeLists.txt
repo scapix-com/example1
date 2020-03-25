@@ -9,8 +9,8 @@ set(CMAKE_CXX_EXTENSIONS ON) # not required, but speeds up compilation of SCAPIX
 include(FetchContent)
 FetchContent_Declare(
   cmodule
-  URL "https://github.com/scapix-com/cmodule/archive/v1.0.7.tar.gz"
-  URL_HASH SHA256=8fb823e90df7d353f9c726617cf5fa3ff16e8f09311e73d4bb0cba88fe9fb50e
+  URL "https://github.com/scapix-com/cmodule/archive/v1.0.8.tar.gz"
+  URL_HASH SHA256=ec6fb82d55f9aa1f912957d33a951881af1c65f6c610f2c85678ebc747730486
 )
 FetchContent_MakeAvailable(cmodule)
 
