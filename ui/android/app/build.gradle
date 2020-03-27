@@ -36,7 +36,7 @@ android {
     }
     sourceSets {
         main.jni.srcDirs += ['../../../source']
-        main.java.srcDirs += ['../../../generated/bridge/java', '../../../.cmodule/scapix/1.0.6/source']
+        main.java.srcDirs += ['../../../generated/bridge/java']
     }
 }
 
