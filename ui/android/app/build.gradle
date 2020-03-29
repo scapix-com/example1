@@ -22,6 +22,11 @@ android {
                         "-DSCAPIX_JAVA_API=android-28"
             }
         }
+        ndk {
+            // By default, all 4 ABIs are built:
+            // abiFilters 'x86', 'x86_64', 'armeabi-v7a', 'arm64-v8a'
+            abiFilters 'x86_64'
+        }
     }
     buildTypes {
         release {
