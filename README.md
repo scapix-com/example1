@@ -1,9 +1,9 @@
 # Example for [Scapix Language Bridge](https://www.scapix.com/)
 
-On the fly code generation to bridge C++ to `Java`, `Objective-C`, `Swift`, `Python` and `JavaScript` (Emscripten).
+On the fly code generation to bridge C++ to `Java`, `Objective-C`, `Swift`, `Python`, `JavaScript` (WebAssembly) and `C#`.
 
 1. Change your C++ code and build your project (bindings generated as part of the build).
-2. Call newly changed C++ code from Java, Objective-C, Swift, Python or JavaScript.
+2. Call newly changed C++ code from Java, Objective-C, Swift, Python, JavaScript or C#.
 
 ### Install
 
