@@ -12,10 +12,10 @@ chat/platform/device.h
 
 namespace chat::platform {
 
-#ifdef __cpp_concepts
+#if 0 // __cpp_concepts >= 201907L
 
 template<typename T>
-concept bool Device = requires(const T a, T b)
+concept Device = requires(const T a, T b)
 {
     { a.name() } -> std::string;
 };
