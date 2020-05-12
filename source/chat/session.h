@@ -12,6 +12,7 @@ chat/session.h
 #include <functional>
 #include <map>
 #include <set>
+#include <stdexcept>
 #include <unordered_map>
 #include <unordered_set>
 #include <scapix/bridge/object.h>
@@ -31,7 +32,7 @@ public:
 
 	using integer32 = std::int32_t;
 
-	session() {}
+	session() noexcept {}
 	session(const string_type&) {}
 	session(std::vector<string_type> vs, int, int, int, int) : strings_(vs) {}
 	session(int) {}
@@ -42,8 +43,17 @@ public:
 	session(std::string s1, std::string s2, std::string = "") { strings_.push_back(s1); strings_.push_back(s2); }
 	session(std::function<void()> callback) {}
 
-	void int_test1(bool, std::int8_t, std::int16_t, std::int32_t, std::int64_t, integer16, integer32) {}
+	void int_test1(bool, std::int8_t, std::int16_t, std::int32_t, std::int64_t, integer16, integer32) noexcept {}
 	void int_test2(const std::int8_t&, const std::int16_t&, const std::int32_t&, const std::int64_t&, const integer16&, const integer32&) {}
+
+	void unsigned_test1(bool, std::uint8_t, std::uint16_t, std::uint32_t, std::uint64_t) noexcept {}
+	void unsigned_test2(const std::uint8_t&, const std::uint16_t&, const std::uint32_t&, const std::uint64_t&) {}
+
+	enum enum_type1 { one, two };
+	enum class enum_type2 { one, two };
+
+	enum_type1 enum_test1(enum_type1, enum_type2) { return one; }
+	enum_type2 enum_test2(enum_type1, enum_type2) { return enum_type2::one; }
 
 	// Python bridge has a bug with rvalue reference parameters (except in constructors), other bridges are fine.
 //	void int_test3(std::int8_t&&, std::int16_t&&, std::int32_t&&, std::int64_t&&, integer16&&, integer32&&) {}
@@ -53,7 +63,7 @@ public:
 
 	// In case of conflict, only the first overloaded function is bridged:
 
-	std::string string(std::string filter) { return filter; }
+	std::string string(std::string filter) noexcept { return filter; }
 	std::string string(std::string filter) const { return filter; }
 	std::string& string(std::string& filter) { return filter; }
 	std::string&& string(std::string&& filter) { return std::move(filter); }
@@ -90,7 +100,7 @@ public:
 	int operator + (int) { return 0; }
 	~session() {}
 	friend void friend_test() {}
-	auto auto_test() { return 0; }
+	auto auto_test() { return 55; }
 	auto auto_test2();
 
 	int* test_unsupported_param_type() { return {}; }
@@ -183,11 +193,20 @@ public:
 		{
 			std::cout << "caught " << e << "\n";
 		}
+		catch (const std::exception& e)
+		{
+			std::cout << "caught " << e.what() << "\n";
+		}
+	}
+
+	void throw_int()
+	{
+		throw 5;
 	}
 
 	void throw_exception()
 	{
-		throw 5;
+		throw std::runtime_error("test exception string");
 	}
 
 	const std::vector<std::string>& strings() const { return strings_; }

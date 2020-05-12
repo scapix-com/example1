@@ -8,6 +8,7 @@ chat/contact.h
 #define CHAT_CONTACT_H
 
 #include <string>
+#include <vector>
 #include <functional>
 #include <scapix/bridge/object.h>
 #include <chat/platform/device.h>
@@ -50,7 +51,32 @@ public:
 	void name3(std::string*) {}
 
 //	void register_event_handler(std::shared_ptr<contact_events> handler) {}
-	void register_on_name_change(std::function<void(std::string)> handler) {}
+	void register_on_name_change(std::function<void(std::string)> handler) { handler("callback from C++"); }
+	void callback2(std::function<void(std::shared_ptr<contact>)> handler) { handler(std::make_shared<contact>("id2", "name2")); }
+
+	void send_contacts(std::vector<std::shared_ptr<contact>> friends) {}
+
+	std::vector<std::int32_t> test_array(std::vector<std::int32_t> a)
+	{
+		for (auto& i : a)
+			++i;
+
+		a.push_back(777);
+		a.push_back(888);
+
+		return a;
+	}
+
+	std::vector<float> test_array2(std::vector<float> a)
+	{
+		for (auto& i : a)
+			++i;
+
+		a.push_back(77.7f);
+		a.push_back(88.8f);
+
+		return a;
+	}
 
 protected:
 
