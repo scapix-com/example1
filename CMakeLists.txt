@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.14)
 
 project(chatlib CXX)
 
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS ON) # not required, but speeds up compilation of SCAPIX_META_STRING with clang and gcc
@@ -42,3 +43,7 @@ source_group(TREE "${CMAKE_CURRENT_SOURCE_DIR}/source/chat" PREFIX "source" FILE
 
 target_sources(chatlib PRIVATE ${chat_sources} ${platforms_sources} ${platform_sources})
 target_include_directories(chatlib PRIVATE source)
+
+if(EXISTS "ui/${SCAPIX_BRIDGE}/CMakeLists.txt")
+  add_subdirectory("ui/${SCAPIX_BRIDGE}")
+endif()
