@@ -127,3 +127,4 @@ $ ./serve.sh
 ```cmd
 > vs_cs.cmd
 ```
+Open Visual Studio solution: `build\vs_cs\ui\cs\chat.sln`
