@@ -43,7 +43,7 @@ Windows: place [ninja.exe](https://github.com/ninja-build/ninja/releases) in PAT
 
 ```bash
 $ brew install python3
-$
+
 $ ./xcode_mac_python.sh
 $ cd ui/python
 $ ./run.py
@@ -67,7 +67,7 @@ Visual Studio solution: `build\vs_python\chatlib.sln`
 
 ```bash
 $ sudo apt install python3-dev
-$
+
 $ ./default_python.sh
 $ cd ui/python
 $ ./run.py
@@ -79,7 +79,7 @@ $ ./run.py
 
 ```bash
 $ brew cask install java
-$
+
 $ ./xcode_mac_java.sh
 $ cd ui/java
 $ ./compile.sh
@@ -105,7 +105,7 @@ Visual Studio solution: `build\vs_java\chatlib.sln`
 
 ```bash
 $ sudo apt install default-jdk
-$
+
 $ ./xcode_mac_java.sh
 $ cd ui/java
 $ ./compile.sh
