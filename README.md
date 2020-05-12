@@ -81,9 +81,6 @@ $ ./run.py
 $ brew cask install java
 
 $ ./xcode_mac_java.sh
-$ cd ui/java
-$ ./compile.sh
-$ ./run.sh
 ```
 
 Xcode project: `build/xcode_mac_java/chatlib.xcodeproj`
@@ -94,9 +91,6 @@ Install [JDK](https://www.oracle.com/technetwork/java/javase/downloads/index.htm
 
 ```cmd
 > vs_java.cmd
-> cd ui\java
-> compile.cmd
-> run.cmd
 ```
 
 Visual Studio solution: `build\vs_java\chatlib.sln`
@@ -107,9 +101,6 @@ Visual Studio solution: `build\vs_java\chatlib.sln`
 $ sudo apt install default-jdk
 
 $ ./xcode_mac_java.sh
-$ cd ui/java
-$ ./compile.sh
-$ ./run.sh
 ```
 
 #### JavaScript (Emscripten)
