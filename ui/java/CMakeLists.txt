@@ -18,6 +18,8 @@ add_jar(chat
     com/scapix/chat/Chat
 )
 
+add_dependencies(chat chatlib)
+
 add_custom_target(run ALL
   COMMAND ${Java_JAVA_EXECUTABLE} -cp "${CMAKE_CURRENT_BINARY_DIR}" -Djava.library.path="$<TARGET_FILE_DIR:chatlib>" -jar chat.jar
 )
