@@ -21,3 +21,5 @@ add_jar(chat
 add_custom_target(run ALL
   COMMAND ${Java_JAVA_EXECUTABLE} -cp "${CMAKE_CURRENT_BINARY_DIR}" -Djava.library.path="$<TARGET_FILE_DIR:chatlib>" -jar chat.jar
 )
+
+add_dependencies(run chat)
