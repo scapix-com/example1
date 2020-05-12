@@ -2,7 +2,6 @@ package com.scapix.chat;
 
 public final class Chat
 {
-	static { System.loadLibrary("chatlib"); }
 	public static void main(String args[])
 	{
 		System.out.println("0");
