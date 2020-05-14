@@ -1,4 +1,4 @@
-package com.scapix.chat;
+package com.example.chat;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;

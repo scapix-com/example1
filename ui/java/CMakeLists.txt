@@ -6,16 +6,18 @@ find_package(Java COMPONENTS Development)
 include(UseJava)
 
 scapix_fix_sources(chatlib)
+
+file(GLOB_RECURSE sources CONFIGURE_DEPENDS "*.java")
 get_target_property(generated_sources chatlib INTERFACE_SOURCES)
+get_target_property(scapix_sources scapix INTERFACE_SOURCES)
 
 add_jar(chat
   SOURCES
-    "com/scapix/chat/Chat.java"
-    "../../generated/bridge/java/com/scapix/Bridge.java"
-    "../../generated/bridge/java/com/scapix/NativeException.java"
+    ${sources}
     ${generated_sources}
+    ${scapix_sources}
   ENTRY_POINT
-    com/scapix/chat/Chat
+    com/example/chat/Chat
 )
 
 add_dependencies(chat chatlib)

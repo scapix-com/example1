@@ -1,4 +1,4 @@
-package com.scapix.chat;
+package com.example.chat;
 
 import org.junit.Test;
 

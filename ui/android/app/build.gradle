@@ -8,7 +8,7 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
     defaultConfig {
-        applicationId "com.scapix.chat"
+        applicationId "com.example.chat"
         minSdkVersion 15
         targetSdkVersion 28
         versionCode 1
