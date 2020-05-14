@@ -63,7 +63,7 @@ public:
 
 	// In case of conflict, only the first overloaded function is bridged:
 
-	std::string string(std::string filter) noexcept { return filter; }
+	std::string string(std::string filter) { return filter; }
 	std::string string(std::string filter) const { return filter; }
 	std::string& string(std::string& filter) { return filter; }
 	std::string&& string(std::string&& filter) { return std::move(filter); }
