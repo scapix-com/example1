@@ -32,6 +32,8 @@ class contact : public scapix::bridge::object<contact>
 {
 public:
 
+	static std::shared_ptr<contact> create() { return std::make_shared<contact>(); }
+
 	contact() {}
 //	contact(int, float) {}
 	contact(const std::string& id, const std::string& name) : id_(id), name_(name) {}

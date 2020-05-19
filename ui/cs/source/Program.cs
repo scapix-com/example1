@@ -8,6 +8,8 @@ namespace Chat
         [STAThread]
         static void Main()
         {
+            var cc = Contact.Create();
+
             Contact c = new Contact();
             c.Name("Hello C#");
             var name = c.Name();
