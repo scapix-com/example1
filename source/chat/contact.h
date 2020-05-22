@@ -34,6 +34,16 @@ public:
 
 	static std::shared_ptr<contact> create() { return std::make_shared<contact>(); }
 
+	std::vector<std::int8_t> int8_vec() const { return {0, 1, 2}; }
+	std::vector<std::int16_t> int16_vec() const { return {0, 1, 2}; }
+	std::vector<std::int32_t> int32_vec() const { return {0, 1, 2}; }
+	std::vector<std::int64_t> int64_vec() const { return {0, 1, 2}; }
+
+	std::vector<std::uint8_t> uint8_vec() const { return {0, 1, 2}; }
+	std::vector<std::uint16_t> uint16_vec() const { return {0, 1, 2}; }
+	std::vector<std::uint32_t> uint32_vec() const { return {0, 1, 2}; }
+	std::vector<std::uint64_t> uint64_vec() const { return {0, 1, 2}; }
+
 	contact() {}
 //	contact(int, float) {}
 	contact(const std::string& id, const std::string& name) : id_(id), name_(name) {}
