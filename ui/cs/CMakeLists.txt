@@ -1,5 +1,13 @@
 cmake_minimum_required(VERSION 3.14)
 
+include(CheckLanguage)
+check_language(CSharp)
+
+if(NOT CMAKE_CSharp_COMPILER)
+  message("-- No C# compiler")
+  return()
+endif()
+
 project(chat CXX CSharp)
 
 string(REGEX REPLACE " /langversion:[0-9]" "" CMAKE_CSharp_FLAGS ${CMAKE_CSharp_FLAGS})
