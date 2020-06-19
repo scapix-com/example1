@@ -16,9 +16,7 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
             cmake {
-                cppFlags "-std=c++17 -frtti -fexceptions -fsigned-char"
-                arguments "-DANDROID_STL=c++_shared",
-                        "-DSCAPIX_PLATFORM=android",
+                arguments "-DSCAPIX_PLATFORM=android",
                         "-DSCAPIX_BRIDGE=java",
                         "-DSCAPIX_JAVA_API=android-28"
             }
