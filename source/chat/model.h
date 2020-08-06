@@ -25,11 +25,11 @@ public:
 	const std::vector<std::shared_ptr<contact>>& friends() { return contacts_; }
 	std::vector<std::shared_ptr<contact>> friends(std::string filter) { return {}; }
 
-    void add_friend(std::shared_ptr<contact> contact) {}
-    void remove_friend(std::shared_ptr<contact> contact) {}
+	void add_friend(std::shared_ptr<contact> contact) {}
+	void remove_friend(std::shared_ptr<contact> contact) {}
 
 	const std::vector<std::shared_ptr<session>>& sessions() { return sessions_; }
-    std::shared_ptr<session> session_with_contact(std::shared_ptr<contact> contact) { return {}; }
+	std::shared_ptr<session> session_with_contact(std::shared_ptr<contact> contact) { return {}; }
 
 private:
 
