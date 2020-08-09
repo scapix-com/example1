@@ -37,7 +37,7 @@ file(GLOB_RECURSE platform_sources CONFIGURE_DEPENDS "source/chat/platform/${SCA
 source_group(TREE "${CMAKE_CURRENT_SOURCE_DIR}/source/chat" PREFIX "source" FILES ${chat_sources} ${platforms_sources} ${platform_sources})
 
 target_sources(chatlib PRIVATE ${chat_sources} ${platforms_sources} ${platform_sources})
-target_include_directories(chatlib PRIVATE source)
+target_include_directories(chatlib PUBLIC source)
 
 if(EXISTS "ui/${SCAPIX_BRIDGE}/CMakeLists.txt")
   add_subdirectory("ui/${SCAPIX_BRIDGE}")
