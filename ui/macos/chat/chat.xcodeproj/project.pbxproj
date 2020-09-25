@@ -12,13 +12,10 @@
 		A18CF137224879340042F11D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A18CF136224879340042F11D /* Assets.xcassets */; };
 		A18CF13A224879340042F11D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A18CF138224879340042F11D /* Main.storyboard */; };
 		A18CF145224879A00042F11D /* TestObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = A18CF144224879A00042F11D /* TestObjC.m */; };
-		A18CF14822487A560042F11D /* libchatlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A18CF14722487A560042F11D /* libchatlib.a */; };
-		A18CF14A22487A590042F11D /* libscapix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A18CF14922487A590042F11D /* libscapix.a */; };
-		A18CF14C22487A6E0042F11D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A18CF14B22487A6E0042F11D /* libc++.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A10B51D42425345B00B996BD /* scapix.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = scapix.xcconfig; path = ../../../build/xcode_mac_objc/scapix.xcconfig; sourceTree = "<group>"; };
+		A1687B79251E9D9C00860222 /* scapix_chatlib.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = scapix_chatlib.xcconfig; path = ../../../build/xcode_mac_objc/scapix_chatlib.xcconfig; sourceTree = "<group>"; };
 		A18CF12F224879340042F11D /* chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A18CF132224879340042F11D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A18CF134224879340042F11D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,9 +26,6 @@
 		A18CF142224879A00042F11D /* chat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "chat-Bridging-Header.h"; sourceTree = "<group>"; };
 		A18CF143224879A00042F11D /* TestObjC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestObjC.h; sourceTree = "<group>"; };
 		A18CF144224879A00042F11D /* TestObjC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestObjC.m; sourceTree = "<group>"; };
-		A18CF14722487A560042F11D /* libchatlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libchatlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		A18CF14922487A590042F11D /* libscapix.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libscapix.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		A18CF14B22487A6E0042F11D /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,9 +33,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A18CF14822487A560042F11D /* libchatlib.a in Frameworks */,
-				A18CF14A22487A590042F11D /* libscapix.a in Frameworks */,
-				A18CF14C22487A6E0042F11D /* libc++.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,10 +42,9 @@
 		A18CF126224879340042F11D = {
 			isa = PBXGroup;
 			children = (
-				A10B51D42425345B00B996BD /* scapix.xcconfig */,
+				A1687B79251E9D9C00860222 /* scapix_chatlib.xcconfig */,
 				A18CF131224879340042F11D /* chat */,
 				A18CF130224879340042F11D /* Products */,
-				A18CF14622487A560042F11D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,16 +70,6 @@
 				A18CF142224879A00042F11D /* chat-Bridging-Header.h */,
 			);
 			path = chat;
-			sourceTree = "<group>";
-		};
-		A18CF14622487A560042F11D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A18CF14B22487A6E0042F11D /* libc++.tbd */,
-				A18CF14922487A590042F11D /* libscapix.a */,
-				A18CF14722487A560042F11D /* libchatlib.a */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +99,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = Scapix;
 				TargetAttributes = {
 					A18CF12E224879340042F11D = {
@@ -185,7 +165,7 @@
 /* Begin XCBuildConfiguration section */
 		A18CF13D224879350042F11D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A10B51D42425345B00B996BD /* scapix.xcconfig */;
+			baseConfigurationReference = A1687B79251E9D9C00860222 /* scapix_chatlib.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -210,6 +190,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -235,11 +216,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					../../../generated/bridge/objc,
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -251,7 +227,7 @@
 		};
 		A18CF13E224879350042F11D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A10B51D42425345B00B996BD /* scapix.xcconfig */;
+			baseConfigurationReference = A1687B79251E9D9C00860222 /* scapix_chatlib.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -276,6 +252,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -295,11 +272,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					../../../generated/bridge/objc,
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -314,6 +286,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = chat/chat.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = chat/Info.plist;
@@ -335,6 +308,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = chat/chat.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = chat/Info.plist;
