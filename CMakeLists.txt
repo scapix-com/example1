@@ -5,8 +5,8 @@ project(chatlib CXX)
 include(FetchContent)
 FetchContent_Declare(
   cmodule
-  URL "https://github.com/scapix-com/cmodule/archive/v1.0.23.tar.gz"
-  URL_HASH SHA256=0278ec892e5199a2c60b5d44856b17140a57e82ac160ce23a979030a277c3eb9
+  URL "https://github.com/scapix-com/cmodule/archive/v1.0.24.tar.gz"
+  URL_HASH SHA256=feaff6aea000559f01e2c676346f61ff37141f44deebb568fe585cbf392e9f83
 )
 FetchContent_MakeAvailable(cmodule)
 
