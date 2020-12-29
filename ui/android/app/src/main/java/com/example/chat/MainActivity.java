@@ -12,10 +12,6 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    static {
-        System.loadLibrary("chatlib");
-    }
-
     void testScapix() {
         TextView tv = (TextView) findViewById(R.id.scapixText);
 
