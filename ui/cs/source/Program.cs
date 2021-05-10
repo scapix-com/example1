@@ -40,6 +40,16 @@ namespace Chat
 
             //var contacts = s.Contacts();
 
+            var m = new Model();
+            var p1 = new Struct2();
+            p1.strings = new string[] { "hello1", "hello2" };
+            p1.callback = (string str) => {
+                return str + " from C#";
+            };
+            p1.f1 = new Struct1 { a = 55, b = "hello", buffer = new uint[] { 33, 44 } };
+
+            var p2 = m.TestStruct(p1);
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

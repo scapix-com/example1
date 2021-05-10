@@ -45,5 +45,18 @@ public final class Chat
 
 		ExtendedContact ex = new ExtendedContact();
 //		ex.protectedFunc();
+
+		Struct2 s2 = new Struct2();
+		s2.strings = new String[]{"string1", "string2"};
+		s2.callback = (String s) -> {
+			System.out.println("from java callback: " + s);
+			return "returned from java callback";
+		};
+		s2.f1 = new Struct1();
+		s2.f1.a = 33;
+		s2.f1.b = "hello struct";
+		s2.f1.buffer = new int[]{44, 55, 66};
+		Struct1 s1 = model.testStruct(s2);
+		System.out.println("s1.a=" + s1.a + ", s1.b=" + s1.b + ", s1.buffer=" + java.util.Arrays.toString(s1.buffer));
 	}
 }

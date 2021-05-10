@@ -47,6 +47,25 @@
 
         s.delete();
         c.delete();
+
+        // test struct
+
+        var m = new Module.Model();
+
+        var callback2 = function()
+        {
+          console.log('inside JS lambda 2');
+          return "from js callback2";
+        };
+
+        var s1 = {a:55, b:"from js", buffer:[33, 44, 55]};
+        var s2 = {strings:["string1", "string2"], callback:callback2, f1:s1};
+
+        var s1 = m.testStruct(s2);
+
+        console.log('s1.a: ' + s1.a + ', s1.b: ' + s1.b + ', s1.buffer: ' + s1.buffer);
+
+        m.delete();
       }
     };
     </script>

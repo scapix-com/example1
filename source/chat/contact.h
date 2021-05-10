@@ -26,6 +26,13 @@ public:
 };
 */
 
+struct data
+{
+	std::int32_t a;
+	float b;
+	bool c;
+};
+
 class contact;
 
 class contact : public scapix::bridge::object<contact>
@@ -48,9 +55,9 @@ public:
 //	contact(int, float) {}
 	contact(const std::string& id, const std::string& name) : id_(id), name_(name) {}
 
-    std::string device_name() const { return platform::device().name(); }
+	std::string device_name() const { return platform::device().name(); }
 
-    const std::string& id() { return id_; }
+	const std::string& id() { return id_; }
 	void id(const std::string& id) { id_ = id; }
 //	void id2(std::string&& id) { id_ = std::move(id); }
 
@@ -88,6 +95,15 @@ public:
 		a.push_back(88.8f);
 
 		return a;
+	}
+
+	data test_struct(data d)
+	{
+		d.a++;
+		d.b--;
+		d.c = true;
+
+		return d;
 	}
 
 protected:

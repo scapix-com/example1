@@ -66,6 +66,7 @@ class ViewController: NSViewController {
         let element = Element()
         element.func1()
 
+		let d = c.testStruct(Data(a:5, b:7.5, c:false))
 	}
     
     override var representedObject: Any? {
@@ -74,6 +75,4 @@ class ViewController: NSViewController {
         }
     }
 
-
 }
-
