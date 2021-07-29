@@ -43,7 +43,6 @@ android {
         }
     }
     sourceSets {
-        main.jni.srcDirs += ['../../../source']
         main.java.srcDirs += ['../../../generated/bridge/java']
     }
 }
