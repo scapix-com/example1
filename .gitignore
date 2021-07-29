@@ -1,7 +1,6 @@
 # scapix
 /build/
 /generated/
-/.cmodule/
 
 # macos
 .DS_Store
