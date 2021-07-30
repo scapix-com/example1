@@ -29,13 +29,7 @@ $ git clone https://github.com/scapix-com/example1
 #### Android
 
 - Open in Android Studio: **ui/android**
-
-Requires CMake 3.14+, add to **ui/android/local.properties**:
-
-Mac: `cmake.dir=/usr/local`\
-Windows: `cmake.dir=c\:\\Program Files\\CMake`
-
-Windows: place [ninja.exe](https://github.com/ninja-build/ninja/releases) in PATH.
+- Requires: [CMake](https://cmake.org/download/), [Ninja](https://github.com/ninja-build/ninja/releases), see [Install CMake and Ninja](https://developer.android.com/studio/projects/install-ndk#vanilla_cmake)
 
 #### Python
 
