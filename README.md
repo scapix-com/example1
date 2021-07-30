@@ -21,12 +21,12 @@ $ git clone https://github.com/scapix-com/example1
 - Run: **xcode_ios_objc.sh**
 - Open in Xcode: **ui/ios/chat.xcworkspace**
 
-#### MacOS
+#### macOS
 
 - Run: **xcode_mac_objc.sh**
 - Open in Xcode: **ui/macos/chat.xcworkspace**
 
-#### Android
+#### Android (on Windows, macOS or Linux)
 
 - Open in Android Studio: **ui/android**
 - Requires: [CMake](https://cmake.org/download/), [Ninja](https://github.com/ninja-build/ninja/releases), see [Install CMake and Ninja](https://developer.android.com/studio/projects/install-ndk#vanilla_cmake)
