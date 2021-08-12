@@ -55,8 +55,8 @@ public:
 	enum_type1 enum_test1(enum_type1, enum_type2) { return one; }
 	enum_type2 enum_test2(enum_type1, enum_type2) { return enum_type2::one; }
 
-	// Python bridge has a bug with rvalue reference parameters (except in constructors), other bridges are fine.
-//	void int_test3(std::int8_t&&, std::int16_t&&, std::int32_t&&, std::int64_t&&, integer16&&, integer32&&) {}
+	const std::string& ref_test(const std::string&, std::string&&) { return name; }
+	void int_test3(std::int8_t&&, std::int16_t&&, std::int32_t&&, std::int64_t&&, integer16&&, integer32&&) {}
 
 	// Using int types directly works, but generates non-portable (target specific) code.
 //	void int_test4(signed char, short, int, long, long long) {}
@@ -213,6 +213,7 @@ public:
 
 private:
 
+	std::string name = "session1";
 	std::vector<std::string> strings_;
 	std::vector<std::shared_ptr<contact>> contacts_;
 
