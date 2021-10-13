@@ -15,16 +15,20 @@ chat/contact.h
 
 namespace chat {
 
-/*
-class contact_events : public scapix::bridge::interface<contact_events>
+// Implement this interface in bridged languages, to receive events from C++.
+// This is currently supported only by Python bridge, support for other languages coming soon.
+// In the meantime, use std::function<> to receive events from C++.
+
+class contact_events : public scapix::bridge::object<contact_events>
 {
 public:
+
+	virtual ~contact_events() = default;
 
 	virtual void name_changed() = 0;
 	virtual void id_changed() = 0;
 
 };
-*/
 
 struct data
 {
