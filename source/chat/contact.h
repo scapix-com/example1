@@ -43,6 +43,8 @@ class contact : public scapix::bridge::object<contact>
 {
 public:
 
+	bool return_bool() { return true; }
+
 	static std::shared_ptr<contact> create() { return std::make_shared<contact>(); }
 
 	std::vector<std::int8_t> int8_vec() const { return {0, 1, 2}; }
