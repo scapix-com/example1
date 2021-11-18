@@ -16,8 +16,8 @@ chat/contact.h
 namespace chat {
 
 // Implement this interface in bridged languages, to receive events from C++.
-// This is currently supported only by Python bridge, support for other languages coming soon.
-// In the meantime, use std::function<> to receive events from C++.
+// Overriding C++ virtual functions in bridged languages currently supported only by Python and JavaScript bridge, support for other languages coming soon.
+// You can also use std::function<> parameters to receive events from C++.
 
 class contact_events : public scapix::bridge::object<contact_events>
 {
