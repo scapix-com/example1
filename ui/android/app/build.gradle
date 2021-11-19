@@ -19,9 +19,7 @@ android {
         externalNativeBuild {
             cmake {
                 arguments "-DANDROID_USE_LEGACY_TOOLCHAIN_FILE=ON", // fix for NDK 23.0 with CMake 3.21
-                        "-DSCAPIX_PLATFORM=android",
-                        "-DSCAPIX_BRIDGE=java",
-                        "-DSCAPIX_JAVA_API=android-28"
+                        "-DSCAPIX_BRIDGE=java"
             }
         }
         ndk {
