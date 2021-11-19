@@ -18,8 +18,7 @@ android {
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         externalNativeBuild {
             cmake {
-                arguments "-DANDROID_USE_LEGACY_TOOLCHAIN_FILE=ON", // fix for NDK 23.0 with CMake 3.21
-                        "-DSCAPIX_BRIDGE=java"
+                arguments "-DSCAPIX_BRIDGE=java"
             }
         }
         ndk {
