@@ -1,0 +1,369 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "java",
+      "hidden": true,
+      "cacheVariables": {
+        "SCAPIX_BRIDGE": "java"
+      }
+    },
+    {
+      "name": "objc",
+      "hidden": true,
+      "cacheVariables": {
+        "SCAPIX_BRIDGE": "objc"
+      }
+    },
+    {
+      "name": "python",
+      "hidden": true,
+      "cacheVariables": {
+        "SCAPIX_BRIDGE": "python"
+      }
+    },
+    {
+      "name": "js",
+      "hidden": true,
+      "cacheVariables": {
+        "SCAPIX_BRIDGE": "js"
+      }
+    },
+    {
+      "name": "cs",
+      "hidden": true,
+      "cacheVariables": {
+        "SCAPIX_BRIDGE": "cs"
+      }
+    },
+    {
+      "name": "default",
+      "displayName": "Default",
+      "description": "Default generator - default build (C++ bridge)",
+      "binaryDir": "${sourceDir}/build/default"
+    },
+    {
+      "name": "default-java",
+      "displayName": "Default generator - Java",
+      "description": "Default generator - Java bridge",
+      "binaryDir": "${sourceDir}/build/default-java",
+      "inherits": [ "default", "java" ]
+    },
+    {
+      "name": "default-objc",
+      "displayName": "Default generator - ObjC",
+      "description": "Default generator - ObjC bridge",
+      "binaryDir": "${sourceDir}/build/default-objc",
+      "inherits": [ "default", "objc" ]
+    },
+    {
+      "name": "default-objc-ios",
+      "displayName": "Default generator - ObjC - iOS",
+      "description": "Default generator - ObjC bridge - iOS",
+      "binaryDir": "${sourceDir}/build/default-objc-ios",
+      "inherits": [ "default", "objc" ],
+      "cacheVariables": {
+        "CMAKE_SYSTEM_NAME": "iOS",
+        "CMAKE_OSX_ARCHITECTURES": "arm64"
+      }
+    },
+    {
+      "name": "default-objc-tvos",
+      "displayName": "Default generator - ObjC - tvOS",
+      "description": "Default generator - ObjC bridge - tvOS",
+      "binaryDir": "${sourceDir}/build/default-objc-tvos",
+      "inherits": [ "default", "objc" ],
+      "cacheVariables": {
+        "CMAKE_SYSTEM_NAME": "tvOS",
+        "CMAKE_OSX_ARCHITECTURES": "arm64"
+      }
+    },
+    {
+      "name": "default-objc-watchos",
+      "displayName": "Default generator - ObjC - watchOS",
+      "description": "Default generator - ObjC bridge - watchOS",
+      "binaryDir": "${sourceDir}/build/default-objc-watchos",
+      "inherits": [ "default", "objc" ],
+      "cacheVariables": {
+        "CMAKE_SYSTEM_NAME": "watchOS",
+        "CMAKE_OSX_ARCHITECTURES": "arm64"
+      }
+    },
+    {
+      "name": "default-python",
+      "displayName": "Default generator - Python",
+      "description": "Default generator - Python bridge",
+      "binaryDir": "${sourceDir}/build/default-python",
+      "inherits": [ "default", "python" ]
+    },
+    {
+      "name": "default-cs",
+      "displayName": "Default generator - C#",
+      "description": "Default generator - C# bridge",
+      "binaryDir": "${sourceDir}/build/default-cs",
+      "inherits": [ "default", "cs" ]
+    },
+    {
+      "name": "xcode",
+      "displayName": "Xcode",
+      "description": "Xcode - default build (C++ bridge)",
+      "binaryDir": "${sourceDir}/build/xcode",
+      "generator": "Xcode"
+    },
+    {
+      "name": "xcode-java",
+      "displayName": "Xcode - Java",
+      "description": "Xcode - Java bridge",
+      "binaryDir": "${sourceDir}/build/xcode-java",
+      "inherits": [ "xcode", "java" ]
+    },
+    {
+      "name": "xcode-objc",
+      "displayName": "Xcode - ObjC",
+      "description": "Xcode - ObjC bridge",
+      "binaryDir": "${sourceDir}/build/xcode-objc",
+      "inherits": [ "xcode", "objc" ]
+    },
+    {
+      "name": "xcode-objc-ios",
+      "displayName": "Xcode - ObjC - iOS",
+      "description": "Xcode - ObjC bridge - iOS",
+      "binaryDir": "${sourceDir}/build/xcode-objc-ios",
+      "inherits": [ "xcode", "objc" ],
+      "cacheVariables": {
+        "CMAKE_SYSTEM_NAME": "iOS"
+      }
+    },
+    {
+      "name": "xcode-objc-tvos",
+      "displayName": "Xcode - ObjC - tvOS",
+      "description": "Xcode - ObjC bridge - tvOS",
+      "binaryDir": "${sourceDir}/build/xcode-objc-tvos",
+      "inherits": [ "xcode", "objc" ],
+      "cacheVariables": {
+        "CMAKE_SYSTEM_NAME": "tvOS"
+      }
+    },
+    {
+      "name": "xcode-objc-watchos",
+      "displayName": "Xcode - ObjC - watchOS",
+      "description": "Xcode - ObjC bridge - watchOS",
+      "binaryDir": "${sourceDir}/build/xcode-objc-watchos",
+      "inherits": [ "xcode", "objc" ],
+      "cacheVariables": {
+        "CMAKE_SYSTEM_NAME": "watchOS"
+      }
+    },
+    {
+      "name": "xcode-python",
+      "displayName": "Xcode - Python",
+      "description": "Xcode - Python bridge",
+      "binaryDir": "${sourceDir}/build/xcode-python",
+      "inherits": [ "xcode", "python" ]
+    },
+    {
+      "name": "xcode-cs",
+      "displayName": "Xcode - C#",
+      "description": "Xcode - C# bridge",
+      "binaryDir": "${sourceDir}/build/xcode-cs",
+      "inherits": [ "xcode", "cs" ]
+    },
+    {
+      "name": "vs2019",
+      "displayName": "Visual Studio 2019",
+      "description": "Visual Studio 2019 - default build (C++ bridge)",
+      "binaryDir": "${sourceDir}/build/vs2019",
+      "generator": "Visual Studio 16 2019",
+      "architecture": "x64",
+      "toolset": "host=x64"
+    },
+    {
+      "name": "vs2019-java",
+      "displayName": "Visual Studio 2019 - Java",
+      "description": "Visual Studio 2019 - Java bridge",
+      "binaryDir": "${sourceDir}/build/vs2019-java",
+      "inherits": [ "vs2019", "java" ]
+    },
+    {
+      "name": "vs2019-java-clang",
+      "displayName": "Visual Studio 2019 - Java - Clang",
+      "description": "Visual Studio 2019 Clang - Java bridge",
+      "binaryDir": "${sourceDir}/build/vs2019-java-clang",
+      "inherits": [ "vs2019", "java" ],
+      "toolset": "clangcl,host=x64"
+    },
+    {
+      "name": "vs2019-python",
+      "displayName": "Visual Studio 2019 - Python",
+      "description": "Visual Studio 2019 - Python bridge",
+      "binaryDir": "${sourceDir}/build/vs2019-python",
+      "inherits": [ "vs2019", "python" ]
+    },
+    {
+      "name": "vs2019-cs",
+      "displayName": "Visual Studio 2019 - C#",
+      "description": "Visual Studio 2019 - C# bridge",
+      "binaryDir": "${sourceDir}/build/vs2019-cs",
+      "inherits": [ "vs2019", "cs" ]
+    },
+    {
+      "name": "vs2022",
+      "displayName": "Visual Studio 2022",
+      "description": "Visual Studio 2022 - default build (C++ bridge)",
+      "binaryDir": "${sourceDir}/build/vs2022",
+      "generator": "Visual Studio 17 2022",
+      "architecture": "x64",
+      "toolset": "host=x64"
+    },
+    {
+      "name": "vs2022-java",
+      "displayName": "Visual Studio 2022 - Java",
+      "description": "Visual Studio 2022 - Java bridge",
+      "binaryDir": "${sourceDir}/build/vs2022-java",
+      "inherits": [ "vs2022", "java" ]
+    },
+    {
+      "name": "vs2022-java-clang",
+      "displayName": "Visual Studio 2022 - Java - Clang",
+      "description": "Visual Studio 2022 Clang - Java bridge",
+      "binaryDir": "${sourceDir}/build/vs2022-java-clang",
+      "inherits": [ "vs2022", "java" ],
+      "toolset": "clangcl,host=x64"
+    },
+    {
+      "name": "vs2022-python",
+      "displayName": "Visual Studio 2022 - Python",
+      "description": "Visual Studio 2022 - Python bridge",
+      "binaryDir": "${sourceDir}/build/vs2022-python",
+      "inherits": [ "vs2022", "python" ]
+    },
+    {
+      "name": "vs2022-cs",
+      "displayName": "Visual Studio 2022 - C#",
+      "description": "Visual Studio 2022 - C# bridge",
+      "binaryDir": "${sourceDir}/build/vs2022-cs",
+      "inherits": [ "vs2022", "cs" ]
+    },
+    {
+      "name": "emscripten",
+      "displayName": "Emscripten - JavaScript",
+      "description": "Emscripten - JavaScript bridge",
+      "binaryDir": "${sourceDir}/build/emscripten",
+      "generator": "Ninja",
+      "inherits": [ "js" ],
+      "cacheVariables": {
+        "CMAKE_TOOLCHAIN_FILE": "$env{EMSDK}/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "default",
+      "configurePreset": "default"
+    },
+    {
+      "name": "default-java",
+      "configurePreset": "default-java"
+    },
+    {
+      "name": "default-objc",
+      "configurePreset": "default-objc"
+    },
+    {
+      "name": "default-objc-ios",
+      "configurePreset": "default-objc-ios"
+    },
+    {
+      "name": "default-objc-tvos",
+      "configurePreset": "default-objc-tvos"
+    },
+    {
+      "name": "default-objc-watchos",
+      "configurePreset": "default-objc-watchos"
+    },
+    {
+      "name": "default-cs",
+      "configurePreset": "default-cs"
+    },
+    {
+      "name": "default-python",
+      "configurePreset": "default-python"
+    },
+    {
+      "name": "xcode",
+      "configurePreset": "xcode"
+    },
+    {
+      "name": "xcode-java",
+      "configurePreset": "xcode-java"
+    },
+    {
+      "name": "xcode-objc",
+      "configurePreset": "xcode-objc"
+    },
+    {
+      "name": "xcode-objc-ios",
+      "configurePreset": "xcode-objc-ios"
+    },
+    {
+      "name": "xcode-objc-tvos",
+      "configurePreset": "xcode-objc-tvos"
+    },
+    {
+      "name": "xcode-objc-watchos",
+      "configurePreset": "xcode-objc-watchos"
+    },
+    {
+      "name": "xcode-cs",
+      "configurePreset": "xcode-cs"
+    },
+    {
+      "name": "xcode-python",
+      "configurePreset": "xcode-python"
+    },
+    {
+      "name": "vs2019",
+      "configurePreset": "vs2019"
+    },
+    {
+      "name": "vs2019-java",
+      "configurePreset": "vs2019-java"
+    },
+    {
+      "name": "vs2019-java-clang",
+      "configurePreset": "vs2019-java-clang"
+    },
+    {
+      "name": "vs2019-python",
+      "configurePreset": "vs2019-python"
+    },
+    {
+      "name": "vs2019-cs",
+      "configurePreset": "vs2019-cs"
+    },
+    {
+      "name": "vs2022",
+      "configurePreset": "vs2022"
+    },
+    {
+      "name": "vs2022-java",
+      "configurePreset": "vs2022-java"
+    },
+    {
+      "name": "vs2022-java-clang",
+      "configurePreset": "vs2022-java-clang"
+    },
+    {
+      "name": "vs2022-python",
+      "configurePreset": "vs2022-python"
+    },
+    {
+      "name": "vs2022-cs",
+      "configurePreset": "vs2022-cs"
+    },
+    {
+      "name": "emscripten",
+      "configurePreset": "emscripten"
+    }
+  ]
+}
