@@ -19,8 +19,7 @@ class ViewController: NSViewController {
         let c = Contact()
         
         c.name("hello")
-        //      self.view.window?.title = c.name()
-        self.view.window?.title = c.deviceName()
+        self.view.window?.title = c.name()
         
         let s = Session()
         

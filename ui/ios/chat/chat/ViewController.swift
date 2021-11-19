@@ -14,9 +14,7 @@ class ViewController: UIViewController {
         
         c.name("hello")
         let name = c.name()
-        let deviceName = c.deviceName()
         c.name(name)
-        c.name(deviceName)
 
         let s = Session()
         

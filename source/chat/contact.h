@@ -11,7 +11,6 @@ chat/contact.h
 #include <vector>
 #include <functional>
 #include <scapix/bridge/object.h>
-#include <chat/platform/device.h>
 
 namespace chat {
 
@@ -60,8 +59,6 @@ public:
 	contact() {}
 //	contact(int, float) {}
 	contact(const std::string& id, const std::string& name) : id_(id), name_(name) {}
-
-	std::string device_name() const { return platform::device().name(); }
 
 	const std::string& id() { return id_; }
 	void id(const std::string& id) { id_ = id; }

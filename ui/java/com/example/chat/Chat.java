@@ -14,7 +14,6 @@ public final class Chat
 		contact.name("hello world");
 		System.out.println("2");
 		System.out.println(contact.name());
-		System.out.println(contact.deviceName());
 		System.out.println("3");
 
 		session.testException(() -> {
