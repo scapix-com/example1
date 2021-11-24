@@ -170,7 +170,7 @@
     },
     {
       "name": "vs2019",
-      "displayName": "Visual Studio 2019",
+      "displayName": "vs2019",
       "description": "Visual Studio 2019 - default build (C++ bridge)",
       "binaryDir": "${sourceDir}/build/vs2019",
       "generator": "Visual Studio 16 2019",
@@ -179,36 +179,44 @@
     },
     {
       "name": "vs2019-java",
-      "displayName": "Visual Studio 2019 - Java",
+      "displayName": "vs2019 - Java",
       "description": "Visual Studio 2019 - Java bridge",
       "binaryDir": "${sourceDir}/build/vs2019-java",
       "inherits": [ "vs2019", "java" ]
     },
     {
-      "name": "vs2019-java-clang",
-      "displayName": "Visual Studio 2019 - Java - Clang",
-      "description": "Visual Studio 2019 Clang - Java bridge",
-      "binaryDir": "${sourceDir}/build/vs2019-java-clang",
+      "name": "vs2019-clang-java",
+      "displayName": "vs2019 - Clang - Java",
+      "description": "Visual Studio 2019 - Clang - Java bridge",
+      "binaryDir": "${sourceDir}/build/vs2019-clang-java",
       "inherits": [ "vs2019", "java" ],
       "toolset": "clangcl,host=x64"
     },
     {
       "name": "vs2019-python",
-      "displayName": "Visual Studio 2019 - Python",
+      "displayName": "vs2019 - Python",
       "description": "Visual Studio 2019 - Python bridge",
       "binaryDir": "${sourceDir}/build/vs2019-python",
       "inherits": [ "vs2019", "python" ]
     },
     {
+      "name": "vs2019-clang-python",
+      "displayName": "vs2019 - Clang - Python",
+      "description": "Visual Studio 2019 - Clang - Python bridge",
+      "binaryDir": "${sourceDir}/build/vs2019-clang-python",
+      "inherits": [ "vs2019", "python" ],
+      "toolset": "clangcl,host=x64"
+    },
+    {
       "name": "vs2019-cs",
-      "displayName": "Visual Studio 2019 - C#",
+      "displayName": "vs2019 - C#",
       "description": "Visual Studio 2019 - C# bridge",
       "binaryDir": "${sourceDir}/build/vs2019-cs",
       "inherits": [ "vs2019", "cs" ]
     },
     {
       "name": "vs2022",
-      "displayName": "Visual Studio 2022",
+      "displayName": "vs2022",
       "description": "Visual Studio 2022 - default build (C++ bridge)",
       "binaryDir": "${sourceDir}/build/vs2022",
       "generator": "Visual Studio 17 2022",
@@ -217,29 +225,37 @@
     },
     {
       "name": "vs2022-java",
-      "displayName": "Visual Studio 2022 - Java",
+      "displayName": "vs2022 - Java",
       "description": "Visual Studio 2022 - Java bridge",
       "binaryDir": "${sourceDir}/build/vs2022-java",
       "inherits": [ "vs2022", "java" ]
     },
     {
-      "name": "vs2022-java-clang",
-      "displayName": "Visual Studio 2022 - Java - Clang",
-      "description": "Visual Studio 2022 Clang - Java bridge",
-      "binaryDir": "${sourceDir}/build/vs2022-java-clang",
+      "name": "vs2022-clang-java",
+      "displayName": "vs2022 - Clang - Java",
+      "description": "Visual Studio 2022 - Clang - Java bridge",
+      "binaryDir": "${sourceDir}/build/vs2022-clang-java",
       "inherits": [ "vs2022", "java" ],
       "toolset": "clangcl,host=x64"
     },
     {
       "name": "vs2022-python",
-      "displayName": "Visual Studio 2022 - Python",
+      "displayName": "vs2022 - Python",
       "description": "Visual Studio 2022 - Python bridge",
       "binaryDir": "${sourceDir}/build/vs2022-python",
       "inherits": [ "vs2022", "python" ]
     },
     {
+      "name": "vs2022-clang-python",
+      "displayName": "vs2022 - Clang - Python",
+      "description": "Visual Studio 2022 - Clang - Python bridge",
+      "binaryDir": "${sourceDir}/build/vs2022-clang-python",
+      "inherits": [ "vs2022", "python" ],
+      "toolset": "clangcl,host=x64"
+    },
+    {
       "name": "vs2022-cs",
-      "displayName": "Visual Studio 2022 - C#",
+      "displayName": "vs2022 - C#",
       "description": "Visual Studio 2022 - C# bridge",
       "binaryDir": "${sourceDir}/build/vs2022-cs",
       "inherits": [ "vs2022", "cs" ]
@@ -330,12 +346,16 @@
       "configurePreset": "vs2019-java"
     },
     {
-      "name": "vs2019-java-clang",
-      "configurePreset": "vs2019-java-clang"
+      "name": "vs2019-clang-java",
+      "configurePreset": "vs2019-clang-java"
     },
     {
       "name": "vs2019-python",
       "configurePreset": "vs2019-python"
+    },
+    {
+      "name": "vs2019-clang-python",
+      "configurePreset": "vs2019-clang-python"
     },
     {
       "name": "vs2019-cs",
@@ -350,12 +370,16 @@
       "configurePreset": "vs2022-java"
     },
     {
-      "name": "vs2022-java-clang",
-      "configurePreset": "vs2022-java-clang"
+      "name": "vs2022-clang-java",
+      "configurePreset": "vs2022-clang-java"
     },
     {
       "name": "vs2022-python",
       "configurePreset": "vs2022-python"
+    },
+    {
+      "name": "vs2022-clang-python",
+      "configurePreset": "vs2022-clang-python"
     },
     {
       "name": "vs2022-cs",
