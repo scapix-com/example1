@@ -6,6 +6,7 @@
   <body>
     <script async type="text/javascript" src="/build/emscripten/chatlib.js"></script>
     <script>
+
     var Module = {
       onRuntimeInitialized: function() {
         var c = new Module.Contact("Hello Scapix", "hello world");
@@ -66,8 +67,23 @@
         console.log('s1.a: ' + s1.a + ', s1.b: ' + s1.b + ', s1.buffer: ' + s1.buffer);
 
         m.delete();
+
+        // override C++ virtual function
+
+        var DerivedClass = Module.AbstractElement.extend("AbstractElement", {
+          func1: function(s) {
+            console.log("DerivedClass.func1: ", s);
+            s.push("DerivedClass.func1");
+            return s;
+          },
+        });
+
+        var instance = new DerivedClass;
+        var ret = instance.func2(["from JS"]);
+        console.log("DerivedClass.func2 ret=", ret);
       }
     };
+
     </script>
   </body>
 </html>

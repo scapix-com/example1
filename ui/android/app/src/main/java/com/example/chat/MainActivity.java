@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         java.util.HashSet<String> hashSet2 = s.unorderedSet(hashSet);
 
         Element element = new Element();
-        element.func1();
+        element.func1(new String[]{"test"});
     }
 
     @Override

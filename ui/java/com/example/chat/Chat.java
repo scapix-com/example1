@@ -40,7 +40,8 @@ public final class Chat
 
 		Element elem = new Element();
 		elem.toString();
-		elem.func1();
+		String[] strings = elem.func1(new String[]{"from Java"});
+		System.out.println(java.util.Arrays.toString(strings));
 
 		ExtendedContact ex = new ExtendedContact();
 //		ex.protectedFunc();
