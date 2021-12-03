@@ -63,9 +63,11 @@ class ViewController: NSViewController {
         objc.sample()
 
         let element = Element()
-        element.func1()
+        let strings = element.func1(["from Swift"])
+		print(strings)
 
 		let d = c.testStruct(Data(a:5, b:7.5, c:false))
+		print(d)
 	}
     
     override var representedObject: Any? {
