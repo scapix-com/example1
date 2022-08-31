@@ -42,6 +42,17 @@ class contact : public scapix::bridge::object<contact>
 {
 public:
 
+	std::vector<bool> vector_bool(std::vector<bool> v)
+	{
+		v.push_back(true);
+		v.push_back(false);
+		v.push_back(true);
+		v.push_back(true);
+		v.push_back(false);
+		v.push_back(true);
+		return v;
+	}
+
 	bool return_bool() { return true; }
 
 	static std::shared_ptr<contact> create() { return std::make_shared<contact>(); }

@@ -50,6 +50,8 @@ namespace Chat
 
             var p2 = m.TestStruct(p1);
 
+            bool[] vb = c.VectorBool(new bool[] { true, false, true, true, false, true });
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

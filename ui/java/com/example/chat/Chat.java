@@ -58,5 +58,8 @@ public final class Chat
 		s2.f1.buffer = new int[]{44, 55, 66};
 		Struct1 s1 = model.testStruct(s2);
 		System.out.println("s1.a=" + s1.a + ", s1.b=" + s1.b + ", s1.buffer=" + java.util.Arrays.toString(s1.buffer));
+
+		boolean[] vb = contact.vectorBool(new boolean[] { true, false, true, true, false, true });
+		System.out.println("vb = " + java.util.Arrays.toString(vb));
 	}
 }
