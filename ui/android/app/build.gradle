@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace 'com.example.chat'
-    compileSdkVersion 33
+    compileSdk 33
     ndkVersion "25.2.9519653"
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -12,8 +12,8 @@ android {
     }
     defaultConfig {
         applicationId "com.example.chat"
-        minSdkVersion 16
-        targetSdkVersion 33
+        minSdk 16
+        targetSdk 33
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
