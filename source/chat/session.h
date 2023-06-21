@@ -211,6 +211,11 @@ public:
 
 	const std::vector<std::string>& strings() const { return strings_; }
 
+	std::vector<std::vector<std::uint8_t>> composed(std::vector<std::vector<std::uint8_t>> p) { return p; }
+	std::unordered_map<std::uint16_t, std::vector<std::uint8_t>> composed2(std::unordered_map<std::uint16_t, std::vector<std::uint8_t>> p) { return p; }
+	std::unordered_map<std::uint16_t, std::unordered_map<std::uint16_t, std::vector<std::uint8_t>>> composed3(std::unordered_map<std::uint16_t, std::unordered_map<std::uint16_t, std::vector<std::uint8_t>>> p) { return p; }
+	std::unordered_map<std::uint16_t, std::unordered_map<std::uint16_t, std::string>> composed4(std::unordered_map<std::uint16_t, std::unordered_map<std::uint16_t, std::string>> p) { return p; }
+
 private:
 
 	std::string name = "session1";
