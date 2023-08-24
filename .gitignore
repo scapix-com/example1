@@ -1,6 +1,7 @@
 # scapix
 /build/
 /generated/
+/CMakeUserPresets.json
 
 # macos
 .DS_Store
