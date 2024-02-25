@@ -14,15 +14,15 @@ namespace Chat
             c.Name("Hello C#");
             var name = c.Name();
 
+            //var func = c.ReturnFunc();
+
             c.RegisterOnNameChange((string str) => {
-                int a = 0;
             });
 
             c.Callback2((Contact c2) => {
                 var name1 = c.Name();
                 var name2 = c2.Name();
                 var id2 = c2.Id();
-                int a = 0;
             });
 
             var s = new Session();
