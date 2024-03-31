@@ -19,17 +19,27 @@ $ git clone https://github.com/scapix-com/example1
 - Run `build` script specifying one the the presets to create and build library project (chatlib).
 - Open corresponding platform specific application project in **ui** folder (chat).
 
-The word "default" in preset names refers to CMake generator - CMake selects default generator for this platform.
+#### macOS
+
+- Run: `./build.sh xcode-objc`
+- Open in Xcode: **ui/macos/chat.xcworkspace**
 
 #### iOS
 
 - Run: `./build.sh xcode-objc-ios`
 - Open in Xcode: **ui/ios/chat.xcworkspace**
 
-#### macOS
+#### tvOS
 
-- Run: `./build.sh xcode-objc`
-- Open in Xcode: **ui/macos/chat.xcworkspace**
+- Run: `./build.sh xcode-objc-tvos`
+
+#### watchOS
+
+- Run: `./build.sh xcode-objc-watchos`
+
+#### visionOS
+
+- Run: `./build.sh xcode-objc-visionos`
 
 #### Android (on Windows, macOS or Linux)
 
@@ -39,12 +49,12 @@ The word "default" in preset names refers to CMake generator - CMake selects def
 #### Python (on Windows, macOS or Linux)
 
 ```bash
-$ ./build.sh default-python
+$ ./build.sh python
 $ cd ui/python
 $ ./run.py
 ```
 
-You can also explicitly specify platform specific generator and then open generated project in corresponding IDE:
+You can also specify CMake generator explicitly and then open generated project in corresponding IDE:
 
 ```bash
 $ build vs2019-python
@@ -55,10 +65,10 @@ $ ./build.sh xcode-python
 #### Java (on Windows, macOS or Linux)
 
 ```bash
-$ ./build.sh default-java
+$ ./build.sh java
 ```
 
-You can also explicitly specify platform specific generator and then open generated project in corresponding IDE:
+You can also specify CMake generator explicitly and then open generated project in corresponding IDE:
 
 ```bash
 $ build vs2019-java
@@ -74,6 +84,14 @@ Install [Emscripten SDK](https://emscripten.org/docs/getting_started/downloads.h
 $ ./build.sh emscripten
 $ cd ui/js
 $ ./serve.sh
+```
+
+On Windows use ninja-emscripten preset, as [Emscripten SDK](https://emscripten.org/docs/getting_started/downloads.html) doesn't support Visual Studio CMake generators:
+
+```bash
+$ build ninja-emscripten
+$ cd ui/js
+$ serve.sh
 ```
 
 #### C#

@@ -2,100 +2,80 @@
   "version": 3,
   "configurePresets": [
     {
-      "name": "base",
-      "hidden": true,
+      "name": "default",
+      "displayName": "Default build, Scapix Bridge disabled",
       "binaryDir": "${sourceDir}/build/${presetName}"
     },
     {
       "name": "java",
-      "hidden": true,
+      "inherits": [ "default" ],
       "cacheVariables": {
         "SCAPIX_BRIDGE": "java"
       }
     },
     {
       "name": "objc",
-      "hidden": true,
+      "inherits": [ "default" ],
       "cacheVariables": {
         "SCAPIX_BRIDGE": "objc"
       }
     },
     {
-      "name": "python",
-      "hidden": true,
-      "cacheVariables": {
-        "SCAPIX_BRIDGE": "python"
-      }
-    },
-    {
-      "name": "js",
-      "hidden": true,
-      "cacheVariables": {
-        "SCAPIX_BRIDGE": "js"
-      }
-    },
-    {
-      "name": "cs",
-      "hidden": true,
-      "cacheVariables": {
-        "SCAPIX_BRIDGE": "cs"
-      }
-    },
-    {
-      "name": "default",
-      "inherits": [ "base" ]
-    },
-    {
-      "name": "default-java",
-      "inherits": [ "default", "java" ]
-    },
-    {
-      "name": "default-objc",
-      "inherits": [ "default", "objc" ]
-    },
-    {
-      "name": "default-objc-ios",
-      "inherits": [ "default", "objc" ],
+      "name": "objc-ios",
+      "inherits": [ "objc" ],
       "cacheVariables": {
         "CMAKE_SYSTEM_NAME": "iOS",
         "CMAKE_OSX_ARCHITECTURES": "arm64"
       }
     },
     {
-      "name": "default-objc-tvos",
-      "inherits": [ "default", "objc" ],
+      "name": "objc-tvos",
+      "inherits": [ "objc" ],
       "cacheVariables": {
         "CMAKE_SYSTEM_NAME": "tvOS",
         "CMAKE_OSX_ARCHITECTURES": "arm64"
       }
     },
     {
-      "name": "default-objc-watchos",
-      "inherits": [ "default", "objc" ],
+      "name": "objc-watchos",
+      "inherits": [ "objc" ],
       "cacheVariables": {
         "CMAKE_SYSTEM_NAME": "watchOS",
         "CMAKE_OSX_ARCHITECTURES": "arm64"
       }
     },
     {
-      "name": "default-objc-visionos",
-      "inherits": [ "default", "objc" ],
+      "name": "objc-visionos",
+      "inherits": [ "objc" ],
       "cacheVariables": {
         "CMAKE_SYSTEM_NAME": "visionOS",
         "CMAKE_OSX_ARCHITECTURES": "arm64"
       }
     },
     {
-      "name": "default-python",
-      "inherits": [ "default", "python" ]
+      "name": "python",
+      "inherits": [ "default" ],
+      "cacheVariables": {
+        "SCAPIX_BRIDGE": "python"
+      }
     },
     {
-      "name": "default-cs",
-      "inherits": [ "default", "cs" ]
+      "name": "js",
+      "inherits": [ "default" ],
+      "cacheVariables": {
+        "SCAPIX_BRIDGE": "js"
+      }
+    },
+    {
+      "name": "cs",
+      "inherits": [ "default" ],
+      "cacheVariables": {
+        "SCAPIX_BRIDGE": "cs"
+      }
     },
     {
       "name": "xcode",
-      "inherits": [ "base" ],
+      "inherits": [ "default" ],
       "generator": "Xcode"
     },
     {
@@ -108,31 +88,19 @@
     },
     {
       "name": "xcode-objc-ios",
-      "inherits": [ "xcode", "objc" ],
-      "cacheVariables": {
-        "CMAKE_SYSTEM_NAME": "iOS"
-      }
+      "inherits": [ "xcode", "objc-ios" ]
     },
     {
       "name": "xcode-objc-tvos",
-      "inherits": [ "xcode", "objc" ],
-      "cacheVariables": {
-        "CMAKE_SYSTEM_NAME": "tvOS"
-      }
+      "inherits": [ "xcode", "objc-tvos" ]
     },
     {
       "name": "xcode-objc-watchos",
-      "inherits": [ "xcode", "objc" ],
-      "cacheVariables": {
-        "CMAKE_SYSTEM_NAME": "watchOS"
-      }
+      "inherits": [ "xcode", "objc-watchos" ]
     },
     {
       "name": "xcode-objc-visionos",
-      "inherits": [ "xcode", "objc" ],
-      "cacheVariables": {
-        "CMAKE_SYSTEM_NAME": "visionOS"
-      }
+      "inherits": [ "xcode", "objc-visionos" ]
     },
     {
       "name": "xcode-python",
@@ -144,8 +112,13 @@
     },
     {
       "name": "vs2019",
-      "inherits": [ "base" ],
+      "inherits": [ "default" ],
       "generator": "Visual Studio 16 2019"
+    },
+    {
+      "name": "vs2019-clang",
+      "inherits": [ "vs2019" ],
+      "toolset": "clangcl"
     },
     {
       "name": "vs2019-java",
@@ -153,8 +126,7 @@
     },
     {
       "name": "vs2019-clang-java",
-      "inherits": [ "vs2019", "java" ],
-      "toolset": "clangcl"
+      "inherits": [ "vs2019-clang", "java" ]
     },
     {
       "name": "vs2019-python",
@@ -162,8 +134,7 @@
     },
     {
       "name": "vs2019-clang-python",
-      "inherits": [ "vs2019", "python" ],
-      "toolset": "clangcl"
+      "inherits": [ "vs2019-clang", "python" ]
     },
     {
       "name": "vs2019-cs",
@@ -171,8 +142,13 @@
     },
     {
       "name": "vs2022",
-      "inherits": [ "base" ],
+      "inherits": [ "default" ],
       "generator": "Visual Studio 17 2022"
+    },
+    {
+      "name": "vs2022-clang",
+      "inherits": [ "vs2022" ],
+      "toolset": "clangcl"
     },
     {
       "name": "vs2022-java",
@@ -180,8 +156,7 @@
     },
     {
       "name": "vs2022-clang-java",
-      "inherits": [ "vs2022", "java" ],
-      "toolset": "clangcl"
+      "inherits": [ "vs2022-clang", "java" ]
     },
     {
       "name": "vs2022-python",
@@ -189,8 +164,7 @@
     },
     {
       "name": "vs2022-clang-python",
-      "inherits": [ "vs2022", "python" ],
-      "toolset": "clangcl"
+      "inherits": [ "vs2022-clang", "python" ]
     },
     {
       "name": "vs2022-cs",
@@ -198,7 +172,7 @@
     },
     {
       "name": "emscripten",
-      "inherits": [ "base", "js" ],
+      "inherits": [ "default", "js" ],
       "cacheVariables": {
         "CMAKE_TOOLCHAIN_FILE": "$env{EMSDK}/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake"
       }
