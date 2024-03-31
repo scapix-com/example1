@@ -5,7 +5,8 @@ IF "%1" == "" (
   exit /b 1
 )
 
-IF %1 == emscripten (
+set str1=%1
+IF NOT x%str1:emscripten=%==x%str1% (
   IF NOT DEFINED EMSDK (
     IF EXIST c:\library\dev\emsdk\emsdk_env.bat (
       setlocal

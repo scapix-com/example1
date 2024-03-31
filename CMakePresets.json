@@ -199,10 +199,14 @@
     {
       "name": "emscripten",
       "inherits": [ "base", "js" ],
-      "generator": "Ninja",
       "cacheVariables": {
         "CMAKE_TOOLCHAIN_FILE": "$env{EMSDK}/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake"
       }
+    },
+    {
+      "name": "ninja-emscripten",
+      "inherits": [ "emscripten" ],
+      "generator": "Ninja"
     }
   ]
 }
