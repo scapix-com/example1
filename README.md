@@ -23,12 +23,12 @@ The word "default" in preset names refers to CMake generator - CMake selects def
 
 #### iOS
 
-- Run: `build.sh xcode-objc-ios`
+- Run: `./build.sh xcode-objc-ios`
 - Open in Xcode: **ui/ios/chat.xcworkspace**
 
 #### macOS
 
-- Run: `build.sh xcode-objc`
+- Run: `./build.sh xcode-objc`
 - Open in Xcode: **ui/macos/chat.xcworkspace**
 
 #### Android (on Windows, macOS or Linux)
@@ -39,7 +39,7 @@ The word "default" in preset names refers to CMake generator - CMake selects def
 #### Python (on Windows, macOS or Linux)
 
 ```bash
-$ build.sh default-python
+$ ./build.sh default-python
 $ cd ui/python
 $ ./run.py
 ```
@@ -49,13 +49,13 @@ You can also explicitly specify platform specific generator and then open genera
 ```bash
 $ build vs2019-python
 $ build vs2022-python
-$ build.sh xcode-python
+$ ./build.sh xcode-python
 ```
 
 #### Java (on Windows, macOS or Linux)
 
 ```bash
-$ build.sh default-java
+$ ./build.sh default-java
 ```
 
 You can also explicitly specify platform specific generator and then open generated project in corresponding IDE:
@@ -63,7 +63,7 @@ You can also explicitly specify platform specific generator and then open genera
 ```bash
 $ build vs2019-java
 $ build vs2022-java
-$ build.sh xcode-java
+$ ./build.sh xcode-java
 ```
 
 #### JavaScript (Emscripten)
@@ -71,7 +71,7 @@ $ build.sh xcode-java
 Install [Emscripten SDK](https://emscripten.org/docs/getting_started/downloads.html)
 
 ```bash
-$ build.sh emscripten
+$ ./build.sh emscripten
 $ cd ui/js
 $ ./serve.sh
 ```
