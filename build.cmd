@@ -6,7 +6,7 @@ IF "%1" == "" (
 )
 
 set str1=%1
-IF NOT x%str1:emscripten=%==x%str1% (
+IF NOT x%str1:js=%==x%str1% (
   IF NOT DEFINED EMSDK (
     IF EXIST c:\library\dev\emsdk\emsdk_env.bat (
       setlocal

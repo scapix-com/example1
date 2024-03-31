@@ -63,8 +63,14 @@
       "name": "js",
       "inherits": [ "default" ],
       "cacheVariables": {
-        "SCAPIX_BRIDGE": "js"
+        "SCAPIX_BRIDGE": "js",
+        "CMAKE_TOOLCHAIN_FILE": "$env{EMSDK}/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake"
       }
+    },
+    {
+      "name": "ninja-js",
+      "inherits": [ "js" ],
+      "generator": "Ninja"
     },
     {
       "name": "cs",
@@ -169,18 +175,6 @@
     {
       "name": "vs2022-cs",
       "inherits": [ "vs2022", "cs" ]
-    },
-    {
-      "name": "emscripten",
-      "inherits": [ "default", "js" ],
-      "cacheVariables": {
-        "CMAKE_TOOLCHAIN_FILE": "$env{EMSDK}/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake"
-      }
-    },
-    {
-      "name": "ninja-emscripten",
-      "inherits": [ "emscripten" ],
-      "generator": "Ninja"
     }
   ]
 }

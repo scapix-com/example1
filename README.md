@@ -81,15 +81,15 @@ $ ./build.sh xcode-java
 Install [Emscripten SDK](https://emscripten.org/docs/getting_started/downloads.html)
 
 ```bash
-$ ./build.sh emscripten
+$ ./build.sh js
 $ cd ui/js
 $ ./serve.sh
 ```
 
-On Windows use ninja-emscripten preset, as [Emscripten SDK](https://emscripten.org/docs/getting_started/downloads.html) doesn't support Visual Studio CMake generators:
+On Windows use ninja-js preset, as [Emscripten SDK](https://emscripten.org/docs/getting_started/downloads.html) doesn't support Visual Studio CMake generators:
 
 ```bash
-$ build ninja-emscripten
+$ build ninja-js
 $ cd ui/js
 $ serve.sh
 ```

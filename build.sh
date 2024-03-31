@@ -3,7 +3,7 @@ if [ -z $1 ]; then
   exit 1
 fi
 
-if [[ $1 == *"emscripten"* ]]; then
+if [[ $1 == *"js"* ]]; then
   if [ -z "$EMSDK" ]; then
     if [ -f ~/Source/emsdk/emsdk_env.sh ]; then
       source ~/Source/emsdk/emsdk_env.sh
