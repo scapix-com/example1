@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../../build/xcode_mac_objc/chatlib.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:chat/chat.xcodeproj">
    </FileRef>
 </Workspace>

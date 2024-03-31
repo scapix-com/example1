@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A10699032BB8F8BA00EBADAF /* scapix_chatlib.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = A10699022BB8F8BA00EBADAF /* scapix_chatlib.xcconfig */; };
 		A19B226E2248737300FE9722 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19B226D2248737300FE9722 /* AppDelegate.swift */; };
 		A19B22702248737300FE9722 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19B226F2248737300FE9722 /* ViewController.swift */; };
 		A19B22732248737300FE9722 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A19B22712248737300FE9722 /* Main.storyboard */; };
@@ -15,8 +16,26 @@
 		A19B22842248757C00FE9722 /* TestObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = A19B22832248757C00FE9722 /* TestObjC.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A10698FE2BB8F8A100EBADAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A10698F52BB8F8A100EBADAF /* chatlib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F5207BAFAD4F4C62891047E2;
+			remoteInfo = chatlib;
+		};
+		A10699002BB8F8A100EBADAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A10698F52BB8F8A100EBADAF /* chatlib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 03B8617EEE354B259F924FA4;
+			remoteInfo = scapix;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		A15FD046251E944700B93FBD /* scapix_chatlib.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = scapix_chatlib.xcconfig; path = ../../../build/xcode_ios_objc/scapix_chatlib.xcconfig; sourceTree = "<group>"; };
+		A10698F52BB8F8A100EBADAF /* chatlib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = chatlib.xcodeproj; path = "../../../build/xcode-objc-ios/chatlib.xcodeproj"; sourceTree = "<group>"; };
+		A10699022BB8F8BA00EBADAF /* scapix_chatlib.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = scapix_chatlib.xcconfig; path = "../../../../build/xcode-objc-ios/scapix_chatlib.xcconfig"; sourceTree = "<group>"; };
 		A19B226A2248737300FE9722 /* chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A19B226D2248737300FE9722 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A19B226F2248737300FE9722 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,10 +59,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A10698F62BB8F8A100EBADAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A10698FF2BB8F8A100EBADAF /* libchatlib.a */,
+				A10699012BB8F8A100EBADAF /* libscapix.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		A19B22612248737200FE9722 = {
 			isa = PBXGroup;
 			children = (
-				A15FD046251E944700B93FBD /* scapix_chatlib.xcconfig */,
+				A10698F52BB8F8A100EBADAF /* chatlib.xcodeproj */,
 				A19B226C2248737300FE9722 /* chat */,
 				A19B226B2248737300FE9722 /* Products */,
 			);
@@ -60,6 +88,7 @@
 		A19B226C2248737300FE9722 /* chat */ = {
 			isa = PBXGroup;
 			children = (
+				A10699022BB8F8BA00EBADAF /* scapix_chatlib.xcconfig */,
 				A19B226D2248737300FE9722 /* AppDelegate.swift */,
 				A19B226F2248737300FE9722 /* ViewController.swift */,
 				A19B22712248737300FE9722 /* Main.storyboard */,
@@ -120,6 +149,12 @@
 			mainGroup = A19B22612248737200FE9722;
 			productRefGroup = A19B226B2248737300FE9722 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A10698F62BB8F8A100EBADAF /* Products */;
+					ProjectRef = A10698F52BB8F8A100EBADAF /* chatlib.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A19B22692248737300FE9722 /* chat */,
@@ -127,11 +162,29 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		A10698FF2BB8F8A100EBADAF /* libchatlib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libchatlib.a;
+			remoteRef = A10698FE2BB8F8A100EBADAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A10699012BB8F8A100EBADAF /* libscapix.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libscapix.a;
+			remoteRef = A10699002BB8F8A100EBADAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		A19B22682248737300FE9722 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A10699032BB8F8BA00EBADAF /* scapix_chatlib.xcconfig in Resources */,
 				A19B22782248737300FE9722 /* LaunchScreen.storyboard in Resources */,
 				A19B22752248737300FE9722 /* Assets.xcassets in Resources */,
 				A19B22732248737300FE9722 /* Main.storyboard in Resources */,
@@ -175,7 +228,7 @@
 /* Begin XCBuildConfiguration section */
 		A19B227A2248737300FE9722 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A15FD046251E944700B93FBD /* scapix_chatlib.xcconfig */;
+			baseConfigurationReference = A10699022BB8F8BA00EBADAF /* scapix_chatlib.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -238,7 +291,7 @@
 		};
 		A19B227B2248737300FE9722 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A15FD046251E944700B93FBD /* scapix_chatlib.xcconfig */;
+			baseConfigurationReference = A10699022BB8F8BA00EBADAF /* scapix_chatlib.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
