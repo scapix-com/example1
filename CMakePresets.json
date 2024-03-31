@@ -78,6 +78,14 @@
       }
     },
     {
+      "name": "default-objc-visionos",
+      "inherits": [ "default", "objc" ],
+      "cacheVariables": {
+        "CMAKE_SYSTEM_NAME": "visionOS",
+        "CMAKE_OSX_ARCHITECTURES": "arm64"
+      }
+    },
+    {
       "name": "default-python",
       "inherits": [ "default", "python" ]
     },
@@ -117,6 +125,13 @@
       "inherits": [ "xcode", "objc" ],
       "cacheVariables": {
         "CMAKE_SYSTEM_NAME": "watchOS"
+      }
+    },
+    {
+      "name": "xcode-objc-visionos",
+      "inherits": [ "xcode", "objc" ],
+      "cacheVariables": {
+        "CMAKE_SYSTEM_NAME": "visionOS"
       }
     },
     {
@@ -188,124 +203,6 @@
       "cacheVariables": {
         "CMAKE_TOOLCHAIN_FILE": "$env{EMSDK}/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake"
       }
-    }
-  ],
-  "buildPresets": [
-    {
-      "name": "default",
-      "configurePreset": "default"
-    },
-    {
-      "name": "default-java",
-      "configurePreset": "default-java"
-    },
-    {
-      "name": "default-objc",
-      "configurePreset": "default-objc"
-    },
-    {
-      "name": "default-objc-ios",
-      "configurePreset": "default-objc-ios"
-    },
-    {
-      "name": "default-objc-tvos",
-      "configurePreset": "default-objc-tvos"
-    },
-    {
-      "name": "default-objc-watchos",
-      "configurePreset": "default-objc-watchos"
-    },
-    {
-      "name": "default-cs",
-      "configurePreset": "default-cs"
-    },
-    {
-      "name": "default-python",
-      "configurePreset": "default-python"
-    },
-    {
-      "name": "xcode",
-      "configurePreset": "xcode"
-    },
-    {
-      "name": "xcode-java",
-      "configurePreset": "xcode-java"
-    },
-    {
-      "name": "xcode-objc",
-      "configurePreset": "xcode-objc"
-    },
-    {
-      "name": "xcode-objc-ios",
-      "configurePreset": "xcode-objc-ios"
-    },
-    {
-      "name": "xcode-objc-tvos",
-      "configurePreset": "xcode-objc-tvos"
-    },
-    {
-      "name": "xcode-objc-watchos",
-      "configurePreset": "xcode-objc-watchos"
-    },
-    {
-      "name": "xcode-cs",
-      "configurePreset": "xcode-cs"
-    },
-    {
-      "name": "xcode-python",
-      "configurePreset": "xcode-python"
-    },
-    {
-      "name": "vs2019",
-      "configurePreset": "vs2019"
-    },
-    {
-      "name": "vs2019-java",
-      "configurePreset": "vs2019-java"
-    },
-    {
-      "name": "vs2019-clang-java",
-      "configurePreset": "vs2019-clang-java"
-    },
-    {
-      "name": "vs2019-python",
-      "configurePreset": "vs2019-python"
-    },
-    {
-      "name": "vs2019-clang-python",
-      "configurePreset": "vs2019-clang-python"
-    },
-    {
-      "name": "vs2019-cs",
-      "configurePreset": "vs2019-cs"
-    },
-    {
-      "name": "vs2022",
-      "configurePreset": "vs2022"
-    },
-    {
-      "name": "vs2022-java",
-      "configurePreset": "vs2022-java"
-    },
-    {
-      "name": "vs2022-clang-java",
-      "configurePreset": "vs2022-clang-java"
-    },
-    {
-      "name": "vs2022-python",
-      "configurePreset": "vs2022-python"
-    },
-    {
-      "name": "vs2022-clang-python",
-      "configurePreset": "vs2022-clang-python"
-    },
-    {
-      "name": "vs2022-cs",
-      "configurePreset": "vs2022-cs"
-    },
-    {
-      "name": "emscripten",
-      "configurePreset": "emscripten"
     }
   ]
 }

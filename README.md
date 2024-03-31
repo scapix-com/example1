@@ -13,88 +13,57 @@ $ git clone https://github.com/scapix-com/example1
 
 ### Build
 
-- Run one of the `*.sh` or `*.cmd` scripts to create and build library project (chatlib).
+`build` script runs CMake configure and build steps using selected CMake preset.
+
+- Run `build` script without parameters to see list of available CMake presets.
+- Run `build` script specifying one the the presets to create and build library project (chatlib).
 - Open corresponding platform specific application project in **ui** folder (chat).
+
+The word "default" in preset names refers to CMake generator - CMake selects default generator for this platform.
 
 #### iOS
 
-- Run: **xcode_ios_objc.sh**
+- Run: `build xcode-objc-ios`
 - Open in Xcode: **ui/ios/chat.xcworkspace**
 
 #### macOS
 
-- Run: **xcode_mac_objc.sh**
+- Run: `build xcode-objc`
 - Open in Xcode: **ui/macos/chat.xcworkspace**
 
 #### Android (on Windows, macOS or Linux)
 
 - Open in Android Studio: **ui/android**
-- Requires: [CMake](https://cmake.org/download/), [Ninja](https://github.com/ninja-build/ninja/releases), see [Install CMake and Ninja](https://developer.android.com/studio/projects/install-ndk#vanilla_cmake)
+- Requires: [Ninja](https://github.com/ninja-build/ninja/releases), see [Install CMake and Ninja](https://developer.android.com/studio/projects/install-ndk#vanilla_cmake)
 
-#### Python
-
-**Mac:**
+#### Python (on Windows, macOS or Linux)
 
 ```bash
-$ brew install python3
-
-$ ./xcode_mac_python.sh
+$ build default-python
 $ cd ui/python
 $ ./run.py
 ```
 
-Xcode project: `build/xcode_mac_python/chatlib.xcodeproj`
-
-**Windows:**
-
-Install [python3](https://www.python.org/downloads/windows/)
-
-```cmd
-> vs_python.cmd
-> cd ui\python
-> run.py
-```
-
-Visual Studio solution: `build\vs_python\chatlib.sln`
-
-**Linux:**
+You can also explicitly specify platform specific generator and then open generated project in corresponding IDE:
 
 ```bash
-$ sudo apt install python3-dev
-
-$ ./default_python.sh
-$ cd ui/python
-$ ./run.py
+$ build vs2019-python
+$ build vs2022-python
+$ build xcode-python
 ```
 
-#### Java
-
-**Mac:**
+#### Java (on Windows, macOS or Linux)
 
 ```bash
-$ brew cask install java
-
-$ ./xcode_mac_java.sh
+$ build default-java
 ```
 
-Xcode project: `build/xcode_mac_java/chatlib.xcodeproj`
-
-**Windows:**
-
-Install [JDK](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
-
-```cmd
-> vs_java.cmd
-```
-
-Visual Studio solution: `build\vs_java\chatlib.sln`
-
-**Linux:**
+You can also explicitly specify platform specific generator and then open generated project in corresponding IDE:
 
 ```bash
-$ sudo apt install default-jdk
-
-$ ./xcode_mac_java.sh
+$ build vs2019-java
+$ build vs2022-java
+$ build xcode-java
 ```
 
 #### JavaScript (Emscripten)
@@ -102,14 +71,15 @@ $ ./xcode_mac_java.sh
 Install [Emscripten SDK](https://emscripten.org/docs/getting_started/downloads.html)
 
 ```bash
-$ ./emscripten.sh
+$ build emscripten
 $ cd ui/js
 $ ./serve.sh
 ```
 
 #### C#
 
-```cmd
-> vs_cs.cmd
+```bash
+$ build vs2022-cs
 ```
-Open Visual Studio solution: `build\vs_cs\ui\cs\chat.sln`
+
+Open Visual Studio solution: `build\vs2022-cs\ui\cs\chat.sln`

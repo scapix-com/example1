@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.20...3.27)
 
 project(chat)
 
@@ -9,13 +9,13 @@ scapix_fix_sources(chatlib)
 
 file(GLOB_RECURSE sources CONFIGURE_DEPENDS "*.java")
 get_target_property(generated_sources chatlib INTERFACE_SOURCES)
-get_target_property(scapix_sources scapix INTERFACE_SOURCES)
+get_target_property(scapix_jni_sources scapix::jni INTERFACE_SOURCES)
 
 add_jar(chat
   SOURCES
     ${sources}
     ${generated_sources}
-    ${scapix_sources}
+    ${scapix_jni_sources}
   ENTRY_POINT
     com/example/chat/Chat
 )
