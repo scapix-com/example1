@@ -14,4 +14,4 @@ if [ $1 = emscripten ]; then
   fi
 fi
 
-cmake --preset $1 && cmake --build build/$1
+cmake --preset $1 && cmake --build build/$1 --parallel

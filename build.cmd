@@ -17,4 +17,4 @@ IF %1 == emscripten (
   )
 )
 
-cmake --preset %1 && cmake --build build/%1
+cmake --preset %1 && cmake --build build/%1 --parallel
