@@ -7,6 +7,7 @@ chat/contact.h
 #ifndef CHAT_CONTACT_H
 #define CHAT_CONTACT_H
 
+#include <memory>
 #include <string>
 #include <vector>
 #include <functional>
