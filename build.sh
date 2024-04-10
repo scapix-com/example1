@@ -14,4 +14,5 @@ if [[ $1 == *"js"* ]]; then
   fi
 fi
 
-cmake --preset $1 && cmake --build build/$1 --parallel
+cmake --preset $1 || exit 1
+cmake --build build/$1 --parallel || exit 1
