@@ -10,6 +10,7 @@ IF NOT x%str1:js=%==x%str1% (
   IF NOT DEFINED EMSDK (
     IF EXIST c:\library\dev\emsdk\emsdk_env.bat (
       setlocal
+      set EMSDK_QUIET=1
       call c:\library\dev\emsdk\emsdk_env.bat
     ) ELSE (
       echo "error: no EMSDK environment variable, run emsdk\emsdk_env.bat"
