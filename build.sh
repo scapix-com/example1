@@ -5,9 +5,9 @@ fi
 
 if [[ $1 == *"js"* ]]; then
   if [ -z "$EMSDK" ]; then
-    if [ -f ~/Source/emsdk/emsdk_env.sh ]; then
+    if [ -f ~/projects/emsdk/emsdk_env.sh ]; then
       export EMSDK_QUIET=1
-      source ~/Source/emsdk/emsdk_env.sh
+      source ~/projects/emsdk/emsdk_env.sh
     else
       echo "error: no EMSDK environment variable, run emsdk/emsdk_env.sh"
       exit 1
