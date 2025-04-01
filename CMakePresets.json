@@ -82,7 +82,10 @@
     {
       "name": "xcode",
       "inherits": [ "default" ],
-      "generator": "Xcode"
+      "generator": "Xcode",
+      "cacheVariables": {
+        "CMAKE_OSX_ARCHITECTURES": ""
+      }
     },
     {
       "name": "xcode-java",
