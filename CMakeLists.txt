@@ -5,8 +5,8 @@ project(chatlib)
 include(FetchContent)
 FetchContent_Declare(
   cmodule
-  URL "https://github.com/scapix-com/cmodule/archive/refs/tags/v2.0.1.tar.gz"
-  URL_HASH SHA256=a9477bbefb43b6fabdc2dc044207fe42cca63999c60b6baf06ba0c62fa116ec5
+  URL "https://github.com/scapix-com/cmodule/archive/refs/tags/v2.0.2.tar.gz"
+  URL_HASH SHA256=9655d2ecfcd70a78093ae03275479d5e24a9c7e967476a290c34c1089a3313b5
 )
 FetchContent_MakeAvailable(cmodule)
 
