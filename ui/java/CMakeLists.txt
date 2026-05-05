@@ -16,8 +16,8 @@ add_jar(chat
     ${sources}
     ${generated_sources}
     ${scapix_jni_sources}
-  ENTRY_POINT
-    com/example/chat/Chat
+  MANIFEST
+    ${CMAKE_CURRENT_SOURCE_DIR}/MANIFEST.MF
 )
 
 add_dependencies(chat chatlib)

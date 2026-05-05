@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Created-By: Scapix
+Enable-Native-Access: ALL-UNNAMED
+Main-Class: com/example/chat/Chat
