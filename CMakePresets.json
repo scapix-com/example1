@@ -178,6 +178,36 @@
     {
       "name": "vs2022-cs",
       "inherits": [ "vs2022", "cs" ]
+    },
+    {
+      "name": "vs2026",
+      "inherits": [ "default" ],
+      "generator": "Visual Studio 18 2026"
+    },
+    {
+      "name": "vs2026-clang",
+      "inherits": [ "vs2026" ],
+      "toolset": "clangcl"
+    },
+    {
+      "name": "vs2026-java",
+      "inherits": [ "vs2026", "java" ]
+    },
+    {
+      "name": "vs2026-clang-java",
+      "inherits": [ "vs2026-clang", "java" ]
+    },
+    {
+      "name": "vs2026-python",
+      "inherits": [ "vs2026", "python" ]
+    },
+    {
+      "name": "vs2026-clang-python",
+      "inherits": [ "vs2026-clang", "python" ]
+    },
+    {
+      "name": "vs2026-cs",
+      "inherits": [ "vs2026", "cs" ]
     }
   ]
 }
