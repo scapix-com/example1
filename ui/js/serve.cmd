@@ -10,4 +10,4 @@ IF NOT DEFINED EMSDK (
   )
 )
 
-%EMSDK%\upstream\emscripten\emrun --serve_root ../.. test.html
+%EMSDK%\upstream\emscripten\emrun --serve_root ..\.. test.html
