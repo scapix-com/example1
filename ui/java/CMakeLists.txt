@@ -24,6 +24,7 @@ add_dependencies(chat chatlib)
 
 add_custom_target(run ALL
   COMMAND ${Java_JAVA_EXECUTABLE} -Djava.library.path="$<TARGET_FILE_DIR:chatlib>" -jar "$<TARGET_PROPERTY:chat,JAR_FILE>"
+  VERBATIM
 )
 
 add_dependencies(run chat)
