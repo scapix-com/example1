@@ -10,9 +10,9 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(cmodule)
 
-file(GLOB_RECURSE bridge_headers CONFIGURE_DEPENDS "source/*.h")
-file(GLOB_RECURSE sources CONFIGURE_DEPENDS "source/*")
-source_group(TREE "${CMAKE_CURRENT_SOURCE_DIR}/source" PREFIX "source" FILES ${sources})
+file(GLOB_RECURSE bridge_headers CONFIGURE_DEPENDS source/*.h)
+file(GLOB_RECURSE sources CONFIGURE_DEPENDS source/*)
+source_group(TREE "${CMAKE_CURRENT_SOURCE_DIR}" FILES ${sources})
 
 find_package(Scapix REQUIRED)
 
