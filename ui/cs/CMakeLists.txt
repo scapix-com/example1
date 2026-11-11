@@ -14,8 +14,8 @@ string(REGEX REPLACE " /langversion:[0-9]" "" CMAKE_CSharp_FLAGS ${CMAKE_CSharp_
 set(CMAKE_CSharp_FLAGS "${CMAKE_CSharp_FLAGS} /langversion:7.3")
 set(CMAKE_CSharp_FLAGS_RELEASE "${CMAKE_CSharp_FLAGS_RELEASE} /define:NDEBUG")
 
-file(GLOB_RECURSE sources CONFIGURE_DEPENDS ${CMAKE_CURRENT_LIST_DIR}/source/*)
-source_group(TREE ${CMAKE_CURRENT_LIST_DIR}/source FILES ${sources})
+file(GLOB_RECURSE sources CONFIGURE_DEPENDS "${CMAKE_CURRENT_LIST_DIR}/source/*")
+source_group(TREE "${CMAKE_CURRENT_LIST_DIR}/source" FILES ${sources})
 
 add_executable(chat ${sources})
 
