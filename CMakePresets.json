@@ -4,7 +4,10 @@
     {
       "name": "default",
       "displayName": "Default build, Scapix Bridge disabled",
-      "binaryDir": "${sourceDir}/build/${presetName}"
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_PROJECT_TOP_LEVEL_INCLUDES": "${sourceDir}/cmake/cmodule.cmake"
+      }
     },
     {
       "name": "java",
