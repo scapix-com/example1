@@ -1,4 +1,4 @@
-# cmodule 3.0.1: builds dependencies from source as part of the build.
+# cmodule 3.0.4: builds dependencies from source as part of the build.
 # https://www.scapix.com/cmodule
 #
 # Load via CMAKE_PROJECT_TOP_LEVEL_INCLUDES (e.g. in CMakePresets.json), or:
@@ -10,7 +10,7 @@
 include(FetchContent)
 FetchContent_Declare(
   cmodule
-  URL https://github.com/scapix-com/cmodule/releases/download/v3.0.1/cmodule-3.0.1.tar.gz
-  URL_HASH SHA256=9a855e4d36f069fbf7568b2a0958f04558d6111908d4378d3b61b4ff0690a6ce
+  URL https://github.com/scapix-com/cmodule/releases/download/v3.0.4/cmodule-3.0.4.tar.gz
+  URL_HASH SHA256=9fbb109542d2f6581a9cdddd715790eeed09f85ca52ff224884738dd6c44d765
 )
 FetchContent_MakeAvailable(cmodule)
